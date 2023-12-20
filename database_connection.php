@@ -10,7 +10,7 @@ $user = 'root'; // Nom d'utilisateur MySQL
 
 $password = ''; // Mot de passe MySQL
 
-$database = 'location'; // Nom de la base de données
+$database = 'location_immobiliere'; // Nom de la base de données
 
 
 // Connexion à la base de données avec MySQLi

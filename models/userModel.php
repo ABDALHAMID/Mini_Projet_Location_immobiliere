@@ -12,51 +12,54 @@ class UserModel {
         return $mysqli;
     }
 
+    public function getUsers(){
+        $query = "SELECT * FROM utilisateur";
+        $result = $this->db->query($query);
 
-
-
-//methode pour recuperer toutel les utilisateur
-public function getUsers(){
-    $query = "SELECT * FROM utilisateur";
-    $result = $this->db->query($query);
-
-    $users = [];
-    while ($row = $result->fetch_assoc()) {
-        $users[] = $row;
+        $users = [];
+        while ($row = $result->fetch_assoc()) {
+            $users[] = $row;
+        }
+        return $users;
     }
-    return $users;
-}
 
-// Méthode pour récupérer les informations d'un utilisateur par son ID
-public function getUserById($userId) {
-    $userId = $this->db->real_escape_string($userId);
-    $query = "SELECT * FROM utilisateur WHERE id = '$userId'";
-    $result = $this->db->query($query);
+    public function getUserById($userId) {
+        $userId = $this->db->real_escape_string($userId);
+        $query = "SELECT * FROM utilisateur WHERE id = '$userId'";
+        $result = $this->db->query($query);
 
-    // Traitez les résultats et renvoyez les données nécessaires
-    $userData = $result->fetch_assoc();
+        $userData = $result->fetch_assoc();
 
-    return $userData;
-}
+        return $userData;
+    }
 
+    public function addUser($FirstName, $LastName, $Type){
+        
+        $query = "INSERT INTO `utilisateur`(`id`, `prenom`, `nom`, `email`, `password`, `type`, `image`) VALUES ('NULL','$FirstName','$LastName','$Type','NULL')";
+        $result = $this->db->query($query);
 
+        if ($result) {
+            
+            return true;
+        } else {
+            
+            echo "<script> console.log(Error adding user: " . $this->db->error. ")</script>";
+            return false;
+        }
 
-// Méthode pour vérifier les informations d'identification de l'utilisateur
-public function checkCredentials($username, $password) {
-    $username = $this->db->real_escape_string($username);
-    $password = $this->db->real_escape_string($password);
+    }
 
-    // Hash du mot de passe dans une application réelle
-    // $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-    $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
-    $result = $this->db->query($query);
-
-    // Retourne true si les informations d'identification sont valides, sinon false
-    return $result->num_rows > 0;
-}
-
-// Autres méthodes liées aux utilisateurs peuvent être ajoutées ici
+    public function dropUser($userId){
+        $userId = $this->db->real_escape_string($userId);
+        $query = "DELETE FROM `utilisateur` WHERE `id`='$userId'";
+        $result = $this->db->query($query);
+        if ($result) {
+            return true;
+        } else {
+            echo "<script> console.log(Error deleting user: " . $this->db->error. ")</script>";
+            return false;
+        }
+    }
 }
 
 ?>

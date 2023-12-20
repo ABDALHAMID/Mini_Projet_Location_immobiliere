@@ -1,4 +1,0 @@
-<?php
-
-$userTableNames="utilisateur";
-

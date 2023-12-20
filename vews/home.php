@@ -1,12 +1,11 @@
 <?php
 
-require('controllers\userController.php');
 
 include('header.php');
 
+include("admin\dashboard.php");
 
-userList();
-
+include("personnel\login.php");
 
 
 
