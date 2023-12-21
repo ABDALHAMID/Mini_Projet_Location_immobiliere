@@ -38,4 +38,10 @@ class LogementModel {
         $result = $this->db->query($query)
         return $result;
     }
+
+    public function dropLogement($logementId){
+        $query = "DROP * FROM logement WHERE id = $logementId";
+        $result = $this->db->query($query);
+        return $result;
+    }
 }

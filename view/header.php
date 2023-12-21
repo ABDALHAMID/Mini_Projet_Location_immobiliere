@@ -7,4 +7,7 @@
         <a href="#">about us</a>
         <a href="#">contact</a>
     </nav>
+    <?php
+    include("userIcon.php");
+    ?>
 </header>

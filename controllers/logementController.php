@@ -1,0 +1,14 @@
+<?php
+    
+  function getNumberOfLogement($number){
+    
+  }  
+
+
+
+
+
+
+
+
+?>

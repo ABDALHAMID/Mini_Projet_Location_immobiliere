@@ -8,7 +8,7 @@ class UserModel {
     }
 
     private function connectToDatabase() {
-        require_once('database_connection.php');
+        require_once('../../database_connection.php');
         return $mysqli;
     }
 
@@ -29,6 +29,17 @@ class UserModel {
         $result = $this->db->query($query);
 
         $userData = $result->fetch_assoc();
+
+        return $userData;
+    }
+
+    public function getUserByEmail($userEmail) {
+        $userEmail = $this->db->real_escape_string($userEmail);
+        $query = "SELECT * FROM utilisateur WHERE email = '$userEmail'";
+        $result = $this->db->query($query);
+
+        $userData = $result->fetch_assoc();
+        
 
         return $userData;
     }

@@ -1,16 +1,23 @@
 <?php
 
-require_once("models\userModel.php");
-
+    function userLogIn($email, $pwd){
+        $userModel = new UserModel();
+        $user = $userModel->getUserByEmail($email);
+        $userPwd = $user['password'];
+        if($pwd == $userPwd){
+            $_SESSION["id"] = $user["id"];
+            $_SESSION["type"] = $user["type"];
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
     
     function usersList(){
         $userModel = new UserModel();
         $users = $userModel->getUsers();
-        foreach ($users as $user) {
-            echo "nom: ".$user["nom"]."<br>";
-            echo "prenom: ".$user["prenom"]."<br>";
-            echo "<br><br>";
-        }
+        return $users;
         
     }
 
@@ -22,8 +29,6 @@ require_once("models\userModel.php");
         $userLastName = trim($userLastName);
         $userLastName = htmlspecialchars($userLastName);
         $userLastName = stripslashes($userLastName);
-
-
         $userModel = new UserModel();
         $userModel->addUser($userFirstName, $userLastName, $userType);
     }
@@ -33,6 +38,6 @@ require_once("models\userModel.php");
     }
     
 
-    ?>
 
+    ?>
 
