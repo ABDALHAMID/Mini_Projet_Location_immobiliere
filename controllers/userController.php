@@ -1,13 +1,16 @@
 <?php
 
+require_once('models/userModel.php');
     function userLogIn($email, $pwd){
         $userModel = new UserModel();
         $user = $userModel->getUserByEmail($email);
-        $userPwd = $user['password'];
-        if($pwd == $userPwd){
-            $_SESSION["id"] = $user["id"];
-            $_SESSION["type"] = $user["type"];
-            return true;
+        if($user != null){
+            $userPwd = $user['password'];
+            if($pwd == $userPwd){
+                $_SESSION["id"] = $user["id"];
+                $_SESSION["type"] = $user["type"];
+                return true;
+            }
         }
         else {
             return false;

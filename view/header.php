@@ -1,4 +1,10 @@
+<div class="click-closed"></div>
 
+<?php
+
+//include_once("formSearch.php"); error ----> Warning: Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\dashboard\Mini_Projet_Location_immobiliere\view\formSearch.php:1) in C:\xampp\htdocs\dashboard\Mini_Projet_Location_immobiliere\view\login\login.php on line 7
+
+?>
 <!-- ======= Header/Navbar ======= -->
 <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
@@ -7,24 +13,24 @@
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" href="index.html">RENT<span class="color-b">it</span></a>
+      <a class="navbar-brand text-brand" href="<?php echo $_SERVER['PHP_SELF'] ?>">RENT <span class="color-b">IT</span></a>
 
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
 
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Accueil</a>
+            <a class="nav-link" href="<?php echo $_SERVER['PHP_SELF'] ?>">Accueil</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="about.html">A propos</a>
+            <a class="nav-link " href="<?php echo $_SERVER['PHP_SELF'] . "?page=about" ?>">A propos</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="property-grid.html">Logement</a>
+            <a class="nav-link " href="<?php echo $_SERVER['PHP_SELF'] . "?page=all_properties" ?>">Logement</a>
           </li>
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link " href="blog-grid.html">Blog</a>
           </li>
 
@@ -36,13 +42,16 @@
               <a class="dropdown-item " href="agents-grid.html">Villa</a>
               <a class="dropdown-item " href="agent-single.html">Bureau</a>
             </div>
-          </li>
+          </li> -->
           <li class="nav-item">
-            <a class="nav-link " href="contact.html">Contact</a>
+            <a class="nav-link " href="<?php echo $_SERVER['PHP_SELF'] . "?page=contactUs" ?>">Contact</a>
           </li>
         </ul>
+        
       </div>
-
+      <?php
+        include("view\userIcon.php");
+      ?>
       <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
         <i class="bi bi-search"></i>
       </button>

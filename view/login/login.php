@@ -1,28 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>location immobiliere</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-<body>
-<div class="login-container">
-        <h2>Login</h2>
-        <form class="login-form" action="process_login.php" method="post">
-            <div class="form-group">
-                <label for="email">email or Email:</label>
-                <input type="text" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit" class="login-btn">Login</button>
-        </form>
-    </div>
+<?php
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $status;
+    $email = $_POST["email"];
+    $pwd = $_POST["password"];
+    if(userLogIn($email, $pwd)){
+        header("location: index.php");
+        $status = true;
+        exit(); 
+        
+    }
+    else{
+        $status = false;
+    }
+}
+?>
+<!-- partial:index.partial.html --> 
+<div style="display: flex;justify-content: center;align-items: center;min-height: 100vh;background: #fff;">
+<section class="login-section"> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<div class="signin"> 
 
-</body>
-</html>
+ <div class="content"> 
+
+  <h2>Sign In</h2> 
+
+  <?php
+  if(isset($status) && $status === false){
+
+      echo '<div class="alert alert-danger d-flex align-items-center" role="alert" style="display: flex;justify-content: space-between;" >
+      <i class="bi bi-exclamation-triangle-fill"></i>
+      <div>
+        E-mail ou password incorrect !!! Veuillez réessayer
+      </div>
+    </div>';
+    }
+  ?>
+
+  <form class="form" action="<?php echo $_SERVER['PHP_SELF'].'?page=login'; ?>" method="post">
+
+  
+
+   <div class="inputBox"> 
+
+    <input type="text" name="email" required> <i>E-mail</i> 
+
+   </div> 
+
+   <div class="inputBox"> 
+
+    <input type="password" name="password" required> <i>Password</i> 
+
+   </div> 
+
+   <div class="links"> <a href="#">Forgot Password</a> <a href="#">Signup</a> 
+
+   </div> 
+
+   <div class="inputBox"> 
+
+    <input type="submit" value="Login"> 
+
+   </div> 
+
+  
+  </form>
+
+ </div> 
+
+</div> 
+
+</section> 
+</div><!-- partial -->

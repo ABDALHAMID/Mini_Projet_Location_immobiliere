@@ -99,17 +99,20 @@
     body.classList.add('box-collapse-closed')
   })
 
+  // Array of available effects
+
   /**
    * Intro Carousel
    */
   new Swiper('.intro-carousel', {
-    speed: 600,
+    speed: 800,
     loop: true,
     autoplay: {
-      delay: 2000,
+      delay: 2500,
       disableOnInteraction: false
     },
     slidesPerView: 'auto',
+    effect: 'coverflow',
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',

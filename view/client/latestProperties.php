@@ -1,8 +1,8 @@
 <?php
-    $logements = lastLogment(4);
+    $logements = lastLogment(10);
 ?>
 <!-- ======= Latest Properties Section ======= -->
-<section class="section-property section-t8">
+<section class="section-property section-t8" id="logement">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -11,7 +11,7 @@
                 <h2 class="title-a">Dernières propriétés</h2>
               </div>
               <div class="title-link">
-                <a href="property-grid.html">Tous les propriétés
+                <a href="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) . '?page=all_properties'; ?>">Tous les propriétés
                   <span class="bi bi-chevron-right"></span>
                 </a>
               </div>
@@ -28,7 +28,7 @@
                 echo'<div class="carousel-item-b swiper-slide">
                 <div class="card-box-a card-shadow">
                 <div class="img-box-a">
-                  <img src="../../assets/img/'.$logement['image_path'].'" alt="" class="img-a img-fluid">
+                  <img src="assets/img/'.$logement['image_path'].'" alt="" class="img-a img-fluid">
                   </div>
                 <div class="card-overlay">
                   <div class="card-overlay-a-content">

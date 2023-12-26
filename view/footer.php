@@ -32,22 +32,19 @@
               <div class="w-body-a">
                 <ul class="list-unstyled">
                   <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Site Map</a>
+                    <i class="bi bi-chevron-right"></i> <a href="<?php echo $_SERVER['PHP_SELF'] . "?page=contactUs" ?>">Site Map</a>
                   </li>
                   <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Juridique</a>
+                    <i class="bi bi-chevron-right"></i> <a href="<?php echo $_SERVER['PHP_SELF'] . "?page=contactUs" ?>">Juridique</a>
                   </li>
                   <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#"> Admin</a>
+                    <i class="bi bi-chevron-right"></i> <a href="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) . '?page=login'?>"> Admin</a>
                   </li>
                   <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Carrières</a>
+                    <i class="bi bi-chevron-right"></i> <a href="<?php echo $_SERVER['PHP_SELF'] . "?page=contactUs" ?>">Carrières</a>
                   </li>
                   <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Filiale</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Politique de confidentialité</a>
+                    <i class="bi bi-chevron-right"></i> <a href="<?php echo $_SERVER['PHP_SELF'] . "?page=contactUs" ?>">Politique de confidentialité</a>
                   </li>
                 </ul>
               </div>
