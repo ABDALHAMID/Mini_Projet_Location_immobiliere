@@ -2,7 +2,7 @@
 
 <?php
 
-//include_once("formSearch.php"); error ----> Warning: Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\dashboard\Mini_Projet_Location_immobiliere\view\formSearch.php:1) in C:\xampp\htdocs\dashboard\Mini_Projet_Location_immobiliere\view\login\login.php on line 7
+include_once("formSearch.php"); //error ----> Warning: Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\dashboard\Mini_Projet_Location_immobiliere\view\formSearch.php:1) in C:\xampp\htdocs\dashboard\Mini_Projet_Location_immobiliere\view\login\login.php on line 7
 
 ?>
 <!-- ======= Header/Navbar ======= -->

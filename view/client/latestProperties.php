@@ -25,7 +25,9 @@
             <?php
             foreach ($logements as $logement) {
                 # code...
-                echo'<div class="carousel-item-b swiper-slide">
+                echo'
+                <a href="#">
+                <div class="carousel-item-b swiper-slide">
                 <div class="card-box-a card-shadow">
                 <div class="img-box-a">
                   <img src="assets/img/'.$logement['image_path'].'" alt="" class="img-a img-fluid">
@@ -34,7 +36,7 @@
                   <div class="card-overlay-a-content">
                   <div class="card-header-a">
                   <h2 class="card-title-a">
-                  <a href="property-single.html">'.$logement['adresse'].
+                  <a >'.$logement['adresse'].
                           '</a>
                           </h2>
                           </div>
@@ -53,7 +55,9 @@
                     </div>
                     </div>
                     </div>
-                    </div><!-- End carousel item -->';
+                    </div>
+                    </a>
+                    <!-- End carousel item -->';
             }
             ?>
           </div>
