@@ -45,7 +45,7 @@ INSERT INTO `logement` (`id`, `adresse`, `type_logement`, `nombre_chambres`, `pr
 (2, '456 Oak St', 'house', 3, 2000.00, 'property-2.jpg'),
 (3, '789 Pine St', 'condo', 1, 1500.00, 'property-3.jpg'),
 (4, '101 Maple St', 'villa', 4, 3000.00, 'property-4.jpg'),
-(5, '202 Elm St', 'townhouse', 2, 1800.00, 'property-5.jpg.jpg'),
+(5, '202 Elm St', 'townhouse', 2, 1800.00, 'property-5.jpg'),
 (6, '303 Cedar St', 'apartment', 1, 1000.00, 'property-6.jpeg'),
 (7, '404 Birch St', 'house', 4, 2500.00, 'property-7.jpg'),
 (8, '505 Pine St', 'condo', 2, 1600.00, 'property-8.jpg'),

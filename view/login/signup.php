@@ -8,8 +8,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(addClient($fname, $name, $email, $pwd)){
         header("location: index.php");
         $status = true;
-        exit(); 
-        
+        exit();
     }
     else{
         $status = false;

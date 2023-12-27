@@ -1853,6 +1853,10 @@ a:hover {
   padding-left: 1rem;
   position: relative;
 }
+.about-img-box img{
+  width: 90%;
+  height: 26rem;
+}
 
 @media (min-width: 576px) {
   .about-img-box {
