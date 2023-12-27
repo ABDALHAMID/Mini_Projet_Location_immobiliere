@@ -24,16 +24,31 @@ require_once('models/userModel.php');
         
     }
 
-    function addUser($userFirstName, $userLastName, $userType){
-        
-        $userFirstName = trim($userFirstName);
-        $userFirstName = htmlspecialchars($userFirstName);
-        $userFirstName = stripslashes($userFirstName);
-        $userLastName = trim($userLastName);
-        $userLastName = htmlspecialchars($userLastName);
-        $userLastName = stripslashes($userLastName);
+    function addClient($userFirstName, $userLastName, $userEmail, $userPassword){
         $userModel = new UserModel();
-        $userModel->addUser($userFirstName, $userLastName, $userType);
+        $user = $userModel->getUserByEmail($userEmail);
+        if($user == null){
+
+            $userFirstName = trim($userFirstName);
+            $userFirstName = htmlspecialchars($userFirstName);
+            $userFirstName = stripslashes($userFirstName);
+            $userLastName = trim($userLastName);
+            $userLastName = htmlspecialchars($userLastName);
+            $userLastName = stripslashes($userLastName);
+            $uploadDir = 'assets/img/UsersImages'; // Specify the directory where you want to store the uploaded files
+            $uploadPath = $uploadDir . basename($_FILES['profile_image']['name']);
+            if (move_uploaded_file($_FILES['profile_image']['tmp_name'], $uploadPath)) {
+                echo "<script>console.log('File is valid, and was successfully uploaded.')</script>";
+                $userModel->addUser($userFirstName, $userLastName, 'client',$_FILES['profile_image']['name']);
+                return true;
+            } else {
+                echo "<script>console.log('Upload failed')</script>";
+            }        
+        }
+        else{
+
+            return false;
+        }
     }
     
     function dropUser($userId){

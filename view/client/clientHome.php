@@ -11,7 +11,7 @@ if (isset($_GET['page'])) {
             include('view\login\login.php');
             break;
         case 'signup':
-            //include('');
+            include('view\login\signup.php');
             break;
         case 'about':
             include('about.php');

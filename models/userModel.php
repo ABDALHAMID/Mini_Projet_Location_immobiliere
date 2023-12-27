@@ -44,9 +44,9 @@ class UserModel {
         return $userData;
     }
 
-    public function addUser($FirstName, $LastName, $Type){
+    public function addUser($FirstName, $LastName, $Type, $img){
         
-        $query = "INSERT INTO `utilisateur`(`id`, `prenom`, `nom`, `email`, `password`, `type`, `image`) VALUES ('NULL','$FirstName','$LastName','$Type','NULL')";
+        $query = "INSERT INTO `utilisateur`(`id`, `prenom`, `nom`, `email`, `password`, `type`, `image`) VALUES ('NULL','$FirstName','$LastName','$Type','$img')";
         $result = $this->db->query($query);
 
         if ($result) {
