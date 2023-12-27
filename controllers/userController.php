@@ -35,10 +35,13 @@ require_once('models/userModel.php');
             $userLastName = htmlspecialchars($userLastName);
             $userLastName = stripslashes($userLastName);
             $uploadDir = 'assets/img/UsersImages/'; // Specify the directory where you want to store the uploaded files
-            $uploadPath = $uploadDir . basename($_FILES['profile_image']['name']);
+            $uploadPath = $uploadDir . basename(trim(htmlspecialchars(stripslashes($_FILES['profile_image']['name']))));
             if (move_uploaded_file($_FILES['profile_image']['tmp_name'], $uploadPath)) {
                 //echo "<script>alert('File is valid, and was successfully uploaded.$uploadPath')</script>";
                 $addUser = $userModel->addUser($userFirstName, $userLastName, $userEmail, $userPassword, 'client',$_FILES['profile_image']['name']);
+                $thisUser = $userModel->getUserByEmail($userEmail);
+                $_SESSION["id"] = $thisUser["id"];
+                $_SESSION["type"] = $thisUser["type"];
                 return true;
             } else {
                 echo "<script>console.log('Upload failed')</script>";
