@@ -1,5 +1,5 @@
 <?php
-    $logements = lastLogment(10);
+    $logements = lastLogement(10);
 ?>
 <!-- ======= Latest Properties Section ======= -->
 <section class="section-property section-t8" id="logement">
