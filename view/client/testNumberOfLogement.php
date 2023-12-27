@@ -1,5 +1,5 @@
 <?php
-    $logements = lastLogment(10);
+    $logements = lastLogement(10);
 ?>
 
 <h3>clients d'aplication</h3>

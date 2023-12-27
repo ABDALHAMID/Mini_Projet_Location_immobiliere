@@ -37,7 +37,6 @@ else{
     
     include("latestProperties.php");
     
-    include("agent.php");
     
     include("Testimonials.php");
 
