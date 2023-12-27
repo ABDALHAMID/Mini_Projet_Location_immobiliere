@@ -20,7 +20,7 @@ header("location:index.php");
 
 }
 
-include('header.php');
+
 if (isset($_SESSION["type"])) {
     if($_SESSION["type"]==="administrator"){
 
@@ -38,7 +38,7 @@ if (isset($_SESSION["type"])) {
 
 
 
-include('footer.php');
+
 
 
 

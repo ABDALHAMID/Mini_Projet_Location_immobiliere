@@ -1,6 +1,6 @@
 
 <?php
-
+include('view/header.php');
 
 if (isset($_GET['page'])) {
     switch ($_GET['page']) {
@@ -26,6 +26,7 @@ if (isset($_GET['page'])) {
     }
 }
 else{
+    
 
     include("introSection.php");
     
@@ -45,6 +46,6 @@ else{
 
 }
 
-
+include('view/footer.php');
 ?>
 
