@@ -1,31 +1,4 @@
-c:\Users\ABDVO\OneDrive\Bureau\portfolio_website\imgs\location_immobiliere.sql-- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Dec 20, 2023 at 07:56 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `location_immobiliere`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `location_order`
---
 
 CREATE TABLE `location_order` (
   `id` int(11) NOT NULL,
@@ -35,9 +8,6 @@ CREATE TABLE `location_order` (
   `status` enum('pending','approved','rejected') NOT NULL DEFAULT 'pending'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `location_order`
---
 
 INSERT INTO `location_order` (`id`, `user_id`, `logement_id`, `date_order`, `status`) VALUES
 (1, 1, 1, '2023-01-01 09:00:00', 'approved'),
@@ -61,12 +31,6 @@ INSERT INTO `location_order` (`id`, `user_id`, `logement_id`, `date_order`, `sta
 (19, 19, 19, '2023-01-19 17:15:00', 'pending'),
 (20, 20, 20, '2023-01-20 19:30:00', 'approved');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `logement`
---
-
 CREATE TABLE `logement` (
   `id` int(11) NOT NULL,
   `adresse` varchar(255) NOT NULL,
@@ -76,37 +40,27 @@ CREATE TABLE `logement` (
   `image_path` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `logement`
---
-
 INSERT INTO `logement` (`id`, `adresse`, `type_logement`, `nombre_chambres`, `prix`, `image_path`) VALUES
-(1, '123 Main St', 'apartment', 2, 1200.00, '/images/apartment1.jpg'),
-(2, '456 Oak St', 'house', 3, 2000.00, '/images/house1.jpg'),
-(3, '789 Pine St', 'condo', 1, 1500.00, '/images/condo1.jpg'),
-(4, '101 Maple St', 'villa', 4, 3000.00, '/images/villa1.jpg'),
-(5, '202 Elm St', 'townhouse', 2, 1800.00, '/images/townhouse1.jpg'),
-(6, '303 Cedar St', 'apartment', 1, 1000.00, '/images/apartment2.jpg'),
-(7, '404 Birch St', 'house', 4, 2500.00, '/images/house2.jpg'),
-(8, '505 Pine St', 'condo', 2, 1600.00, '/images/condo2.jpg'),
-(9, '606 Oak St', 'villa', 3, 2700.00, '/images/villa2.jpg'),
-(10, '707 Maple St', 'townhouse', 3, 1900.00, '/images/townhouse2.jpg'),
-(11, '808 Elm St', 'apartment', 2, 1300.00, '/images/apartment3.jpg'),
-(12, '909 Cedar St', 'house', 5, 2800.00, '/images/house3.jpg'),
-(13, '111 Birch St', 'condo', 1, 1400.00, '/images/condo3.jpg'),
-(14, '222 Pine St', 'villa', 4, 3200.00, '/images/villa3.jpg'),
-(15, '333 Oak St', 'townhouse', 2, 1700.00, '/images/townhouse3.jpg'),
-(16, '444 Maple St', 'apartment', 3, 1600.00, '/images/apartment4.jpg'),
-(17, '555 Cedar St', 'house', 4, 2400.00, '/images/house4.jpg'),
-(18, '666 Birch St', 'condo', 2, 1800.00, '/images/condo4.jpg'),
-(19, '777 Pine St', 'villa', 5, 3500.00, '/images/villa4.jpg'),
-(20, '888 Elm St', 'townhouse', 3, 2000.00, '/images/townhouse4.jpg');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `utilisateur`
---
+(1, '123 Main St', 'apartment', 2, 1200.00, 'property-1.jpg'),
+(2, '456 Oak St', 'house', 3, 2000.00, 'property-2.jpg'),
+(3, '789 Pine St', 'condo', 1, 1500.00, 'property-3.jpg'),
+(4, '101 Maple St', 'villa', 4, 3000.00, 'property-4.jpg'),
+(5, '202 Elm St', 'townhouse', 2, 1800.00, 'property-5.jpg.jpg'),
+(6, '303 Cedar St', 'apartment', 1, 1000.00, 'property-6.jpeg'),
+(7, '404 Birch St', 'house', 4, 2500.00, 'property-7.jpg'),
+(8, '505 Pine St', 'condo', 2, 1600.00, 'property-8.jpg'),
+(9, '606 Oak St', 'villa', 3, 2700.00, 'property-9.jpg'),
+(10, '707 Maple St', 'townhouse', 3, 1900.00, 'property-10.jpg'),
+(11, '808 Elm St', 'apartment', 2, 1300.00, 'property-1.jpg'),
+(12, '909 Cedar St', 'house', 5, 2800.00, 'property-2.jpg'),
+(13, '111 Birch St', 'condo', 1, 1400.00, 'property-3.jpg'),
+(14, '222 Pine St', 'villa', 4, 3200.00, 'property-4.jpg'),
+(15, '333 Oak St', 'townhouse', 2, 1700.00, 'property-5.jpg'),
+(16, '444 Maple St', 'apartment', 3, 1600.00, 'property-6.jpeg'),
+(17, '555 Cedar St', 'house', 4, 2400.00, 'property-7.jpg'),
+(18, '666 Birch St', 'condo', 2, 1800.00, 'property-8.jpg'),
+(19, '777 Pine St', 'villa', 5, 3500.00, 'property-9.jpg'),
+(20, '888 Elm St', 'townhouse', 3, 2000.00, 'property-10.jpg');
 
 CREATE TABLE `utilisateur` (
   `id` int(11) NOT NULL,
@@ -117,10 +71,6 @@ CREATE TABLE `utilisateur` (
   `image_path` varchar(255) DEFAULT NULL,
   `type` enum('client','administrator') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `utilisateur`
---
 
 INSERT INTO `utilisateur` (`id`, `prenom`, `nom`, `email`, `password`, `image_path`, `type`) VALUES
 (1, 'John', 'Doe', 'john.doe@email.com', 'hashed_password1', '/images/john_doe.jpg', 'client'),
@@ -144,64 +94,29 @@ INSERT INTO `utilisateur` (`id`, `prenom`, `nom`, `email`, `password`, `image_pa
 (19, 'Logan', 'Baker', 'logan.baker@email.com', 'hashed_password19', '/images/logan_baker.jpg', 'administrator'),
 (20, 'Sophie', 'Martin', 'sophie.martin@email.com', 'hashed_password20', '/images/sophie_martin.jpg', 'administrator');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `location_order`
---
 ALTER TABLE `location_order`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`),
   ADD KEY `logement_id` (`logement_id`);
 
---
--- Indexes for table `logement`
---
 ALTER TABLE `logement`
   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `utilisateur`
---
 ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `location_order`
---
 ALTER TABLE `location_order`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
---
--- AUTO_INCREMENT for table `logement`
---
 ALTER TABLE `logement`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
---
--- AUTO_INCREMENT for table `utilisateur`
---
 ALTER TABLE `utilisateur`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `location_order`
---
 ALTER TABLE `location_order`
   ADD CONSTRAINT `location_order_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `utilisateur` (`id`),
   ADD CONSTRAINT `location_order_ibfk_2` FOREIGN KEY (`logement_id`) REFERENCES `logement` (`id`);
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+INSERT INTO `utilisateur`(`id`, `prenom`, `nom`, `email`, `password`, `image_path`, `type`) VALUES (NULL,'admin','adminNom','admin@rentit.com','123','','administrator');
+INSERT INTO `utilisateur`(`id`, `prenom`, `nom`, `email`, `password`, `image_path`, `type`) VALUES (NULL,'client','clientNom','client@rentit.com','123','','client');
