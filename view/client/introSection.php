@@ -22,7 +22,7 @@
                          '.pathinfo($image)["filename"].'
                       </h1>
                       <p class="intro-subtitle intro-price">
-                        <a>RENT<span class="color-b price-a ">IT</span></a>
+                        <a>offres<span class="color-b price-a ">exceptionnels</span></a>
                       </p>
                     </div>
                   </div>

@@ -14,7 +14,7 @@
             <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                  <a href="index.html">Home</a>
+                  <a href="index.html">Accuei</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
                   Contact
@@ -66,12 +66,12 @@
                       <div class="mb-3">
                         <div class="loading">Loading</div>
                         <div class="error-message"></div>
-                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                        <div class="sent-message">Message bien envoyer. Merci!</div>
                       </div>
                     </div>
 
                     <div class="col-md-12 text-center">
-                      <button type="submit" class="btn btn-a">Send Message</button>
+                      <button type="submit" class="btn btn-a">Envoyer</button>
                     </div>
                   </div>
                 </form>
@@ -83,14 +83,14 @@
                   </div>
                   <div class="icon-box-content table-cell">
                     <div class="icon-box-title">
-                      <h4 class="icon-title">Say Hello</h4>
+                      <h4 class="icon-title">Contact</h4>
                     </div>
                     <div class="icon-box-content">
                       <p class="mb-1">Email.
-                        <span class="color-a">contact@example.com</span>
+                        <span class="color-a">Raintit@gmail.com</span>
                       </p>
                       <p class="mb-1">Phone.
-                        <span class="color-a">+54 356 945234</span>
+                        <span class="color-a">+212 500000000</span>
                       </p>
                     </div>
                   </div>
@@ -101,12 +101,12 @@
                   </div>
                   <div class="icon-box-content table-cell">
                     <div class="icon-box-title">
-                      <h4 class="icon-title">Find us in</h4>
+                      <h4 class="icon-title">Localisation</h4>
                     </div>
                     <div class="icon-box-content">
                       <p class="mb-1">
-                        Manhattan, Nueva York 10036,
-                        <br> EE. UU.
+                        Agadir,Maroc 80000;
+                        
                       </p>
                     </div>
                   </div>
@@ -117,7 +117,7 @@
                   </div>
                   <div class="icon-box-content table-cell">
                     <div class="icon-box-title">
-                      <h4 class="icon-title">Social networks</h4>
+                      <h4 class="icon-title">Réseaux sociaux</h4>
                     </div>
                     <div class="icon-box-content">
                       <div class="socials-footer">
