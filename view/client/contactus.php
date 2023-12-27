@@ -6,15 +6,15 @@
         <div class="row">
           <div class="col-md-12 col-lg-8">
             <div class="title-single-box">
-              <h1 class="title-single">Contact US</h1>
-              <span class="color-text-a">Aut voluptas consequatur unde sed omnis ex placeat quis eos. Aut natus officia corrupti qui autem fugit consectetur quo. Et ipsum eveniet laboriosam voluptas beatae possimus qui ducimus. Et voluptatem deleniti. Voluptatum voluptatibus amet. Et esse sed omnis inventore hic culpa.</span>
+              <h1 class="title-single">Contactez_Nous</h1>
+              <span class="color-text-a">"Le plaisir semble émaner de diverses sources, mais chacun le recherche là où il lui plaît. Les responsabilités officielles peuvent être altérées, et ceux qui cherchent à échapper sont difficiles à condamner. Ainsi, même la fatigue peut apporter une joie laborieuse, que nous guidons. La délectation est écartée, et les plaisirs sont variés. Chaque chose semble être inventée ici, souvent motivée par la culpabilité.".</span>
             </div>
           </div>
           <div class="col-md-12 col-lg-4">
             <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                  <a href="index.html">Home</a>
+                  <a href="index.html">Accuei</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
                   Contact
