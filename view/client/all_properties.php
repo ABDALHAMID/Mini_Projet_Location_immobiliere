@@ -9,18 +9,18 @@
         <div class="row">
           <div class="col-md-12 col-lg-8">
             <div class="title-single-box">
-              <h1 class="title-single">Our Amazing Properties</h1>
-              <span class="color-text-a">Grid Properties</span>
+              <h1 class="title-single">Nos propriétés extraordinaires</h1>
+              <span class="color-text-a">Nos propriétés</span>
             </div>
           </div>
           <div class="col-md-12 col-lg-4">
             <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <a href="#">Accueil</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                  Properties Grid
+                  Nos propriétés
                 </li>
               </ol>
             </nav>
