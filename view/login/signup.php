@@ -26,7 +26,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
  <div class="content" > 
 
-  <h2>Sign In</h2> 
+  <h2>Sign Un</h2> 
 
   <?php
   if(isset($status) && $status === false){
@@ -73,7 +73,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
 
-   <div class="links"> <a href="#">Forgot Password</a> <a href="#">Signup</a> 
+   <div class="links">
+     <a href="#">Forgot Password</a>
+    <a href="<?php echo $_SERVER['PHP_SELF'].'?page=login'; ?>">Log In</a> 
 
    </div> 
 

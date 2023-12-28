@@ -52,7 +52,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
    </div> 
 
-   <div class="links"> <a href="#">Forgot Password</a> <a href="#">Signup</a> 
+   <div class="links"> 
+    <a href="#">Forgot Password</a>
+    <a href="<?php echo $_SERVER['PHP_SELF'].'?page=signup'; ?>">Sign Up</a> 
 
    </div> 
 
