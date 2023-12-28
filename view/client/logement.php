@@ -129,9 +129,9 @@
             </div>
             <div class="amenities-list color-text-a">
               <ul class="list-a no-margin">
-                <li>Balcony</li>
-                <li>Outdoor Kitchen</li>
-                <li>Cable Tv</li>
+                <li>Balcone</li>
+                <li>Cuissin exterieur</li>
+                <li> Tv cable</li>
                 <li>Deck</li>
                 <li>Tennis Courts</li>
                 <li>Internet</li>
