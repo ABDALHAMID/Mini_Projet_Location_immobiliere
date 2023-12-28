@@ -66,7 +66,7 @@
                       <div class="price-box d-flex">
                         <span class="price-a">rent | '.$logement["prix"].'</span>
                       </div>
-                      <a href="'.$_SERVER['PHP_SELF'].'?page=logement&id='.$logement['id'].'" class="link-a">Click here to view
+                      <a href="'.$_SERVER['PHP_SELF'].'?page=logement&id='.$logement['id'].'" class="link-a">voir plus
                       <span class="bi bi-chevron-right"></span></a>
                     </div>
                     <div class="card-footer-a">
