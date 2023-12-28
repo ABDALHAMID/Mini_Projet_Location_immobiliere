@@ -1323,7 +1323,9 @@ a:hover {
   color: #ffffff;
   margin-bottom: 0;
   padding-bottom: 0.7rem;
+  transition: .3s ease;
 }
+
 
 @media (min-width: 768px) {
   .card-header-a .card-title-a {
@@ -1342,10 +1344,26 @@ a:hover {
   text-decoration: none;
 }
 
+.card-header-a .card-title-a a:hover {
+  color: #b5ffb5;
+  transform: scale(1.05);
+}
 .card-body-a {
   z-index: 2;
   transition: all 0.5s ease-in;
   padding: 0rem 1rem 2rem 1rem;
+}
+
+.card-body-a .link-a:hover {
+  color: #00ff00;
+  transform: scale(1.05);
+}
+.card-body-a .link-a span {
+  
+  transition: .3s ease;
+}
+.card-body-a .link-a:hover > span {
+  margin-left: 50px;
 }
 
 .card-body-a .price-box {
