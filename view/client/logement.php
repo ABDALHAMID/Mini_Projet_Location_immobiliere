@@ -165,7 +165,7 @@
               <img src="assets/img/property-7.jpg" alt="">
             </div>
             <div class="carousel-item-b swiper-slide">
-              <img src="assets/img/slide-2.jpeg" alt="">
+              <img src="assets/img/property-5.jpg" alt="">
             </div>
           </div>
         </div>
