@@ -152,7 +152,7 @@
             <a class="nav-link" id="pills-plans-tab" data-bs-toggle="pill" href="#pills-plans" role="tab" aria-controls="pills-plans" aria-selected="false">Floor Plans</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="pills-map-tab" data-bs-toggle="pill" href="#pills-map" role="tab" aria-controls="pills-map" aria-selected="false">Ubication</a>
+            <a class="nav-link" id="pills-map-tab" data-bs-toggle="pill" href="#pills-map" role="tab" aria-controls="pills-map" aria-selected="false">Emplacement</a>
           </li>
         </ul>
         <div class="tab-content" id="pills-tabContent">
@@ -162,7 +162,7 @@
         <div id="property-single-carousel" class="swiper">
           <div class="swiper-wrapper">
             <div class="carousel-item-b swiper-slide">
-              <img src="assets/img/slide-1.jpeg" alt="">
+              <img src="assets/img/property-7.jpg" alt="">
             </div>
             <div class="carousel-item-b swiper-slide">
               <img src="assets/img/slide-2.jpeg" alt="">
