@@ -18,7 +18,10 @@ if (isset($_GET['page'])) {
          break;
         case 'contactUs':
             include('contactus.php');
-        break;  
+        break; 
+        case 'logement':
+            include('logement.php');
+        break;   
         
         default:
             # code...

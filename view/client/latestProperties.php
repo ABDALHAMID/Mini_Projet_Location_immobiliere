@@ -26,37 +26,31 @@
             foreach ($logements as $logement) {
                 # code...
                 echo'
-                <a href="#">
                 <div class="carousel-item-b swiper-slide">
-                <div class="card-box-a card-shadow">
-                <div class="img-box-a">
-                  <img src="assets/img/'.$logement['image_path'].'" alt="" class="img-a img-fluid">
-                  </div>
-                <div class="card-overlay">
-                  <div class="card-overlay-a-content">
-                  <div class="card-header-a">
-                  <h2 class="card-title-a">
-                  <a >'.$logement['adresse'].
-                          '</a>
-                          </h2>
+                  <div class="card-box-a card-shadow">
+                    <div class="img-box-a">
+                      <img src="assets/img/'.$logement['image_path'].'" alt="" class="img-a img-fluid">
+                    </div>
+                      <div class="card-overlay">
+                        <div class="card-overlay-a-content">
+                          <div class="card-header-a">
+                            <h2 class="card-title-a"><a>'.$logement['adresse'].'</a></h2>
                           </div>
                           <div class="card-body-a">
-                      <div class="price-box d-flex">
-                        <span class="price-a">rent | $'.$logement['prix'].'</span>
+                            <div class="price-box d-flex">
+                              <span class="price-a">rent | $'.$logement['prix'].'</span>
+                            </div>
+                            <a href="'.$_SERVER['PHP_SELF'].'?page=logement&id='.$logement['id'].'" class="link-a">Click ici<span class="bi bi-chevron-right"></span></a>
+                          </div>
+                          <div class="card-footer-a">
+                            <ul class="card-info d-flex justify-content-around">
+                            </ul>
+                          </div>
                         </div>
-                      <a href="#" class="link-a">Click ici
-                        <span class="bi bi-chevron-right"></span>
-                      </a>
-                    </div>
-                    <div class="card-footer-a">
-                      <ul class="card-info d-flex justify-content-around">
-                      </ul>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                    </a>
+                      </div>
+                  </div>
+                </div>
+                    
                     <!-- End carousel item -->';
             }
             ?>
