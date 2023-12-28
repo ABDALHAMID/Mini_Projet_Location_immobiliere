@@ -12,6 +12,12 @@
     return $data;
   }
 
+  function getLogement($id){
+    $logementModel = new LogementModel();
+    $data = $logementModel->getLogementById($id);
+    return $data;
+  }
+
 
 
 

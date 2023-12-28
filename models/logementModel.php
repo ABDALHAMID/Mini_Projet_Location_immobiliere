@@ -43,8 +43,8 @@ class LogementModel {
     }
 
     public function getLogementById($logementId) {
-        $query = "SELECT * FROM logement WHERE id = $logementId";
-        $result = $this->db->query($query);
+        $query = "SELECT * FROM logement WHERE id = '$logementId'";
+        $result = $this->db->query($query)->fetch_assoc();
         return $result;
     }
 
