@@ -19606,7 +19606,6 @@ dl li {
     width: calc(100% - 70px);
   }
 }
-
 .rtl {
   direction: rtl;
   text-align: right;
@@ -19633,7 +19632,6 @@ dl li {
   background-color: darkgrey;
   outline: 1px solid slategrey;
 }
-
 .page-body-wrapper {
   min-height: calc(100vh - 70px);
   display: -webkit-box;
@@ -19650,7 +19648,6 @@ dl li {
   width: 100%;
   min-height: 100vh;
 }
-
 .main-panel {
   -webkit-transition: width 0.25s ease, margin 0.25s ease;
   transition: width 0.25s ease, margin 0.25s ease;
@@ -19670,7 +19667,6 @@ dl li {
     width: 100%;
   }
 }
-
 .content-wrapper {
   background: #f2edf3;
   padding: 2.75rem 2.25rem;

@@ -1,6 +1,6 @@
 <div class="container-scroller">
 
-<?php include_once('view/dashboardHeader.php'); ?>
+<?php include_once('header.php'); ?>
 
 <!-- partial -->
 <div class="container-fluid page-body-wrapper">
