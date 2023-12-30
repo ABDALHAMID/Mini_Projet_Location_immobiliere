@@ -86,7 +86,7 @@ $(function () {
     ]
   };
   var options = {
-    scales: {
+    data: {
       yAxes: [{
         ticks: {
           beginAtZero: true
@@ -104,7 +104,7 @@ $(function () {
 
   };
   var optionsDark = {
-    scales: {
+    data: {
       yAxes: [{
         ticks: {
           beginAtZero: true
@@ -229,7 +229,7 @@ $(function () {
   }
 
   var areaOptionsDark = {
-    scales: {
+    data: {
       yAxes: [{
         ticks: {
           beginAtZero: true
@@ -295,7 +295,7 @@ $(function () {
         radius: 0
       }
     },
-    scales: {
+    data: {
       xAxes: [{
         gridLines: {
           display: false
@@ -426,7 +426,7 @@ $(function () {
   }
 
   var scatterChartOptions = {
-    scales: {
+    data: {
       xAxes: [{
         type: 'linear',
         position: 'bottom'
@@ -435,7 +435,7 @@ $(function () {
   }
 
   var scatterChartOptionsDark = {
-    scales: {
+    data: {
       xAxes: [{
         type: 'linear',
         position: 'bottom',

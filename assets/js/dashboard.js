@@ -86,7 +86,7 @@
               legend: {
                   display: false
               },
-              scales: {
+              data: {
                   yAxes: [{
                       ticks: {
                           display: false,
@@ -161,7 +161,7 @@
               legend: {
                   display: false
               },
-              scales: {
+              data: {
                   yAxes: [{
                       ticks: {
                           display: false,
@@ -276,7 +276,7 @@
             text.push('</ul>'); 
             return text.join('');
           },
-          scales: {
+          data: {
               yAxes: [{
                   ticks: {
                       display: false,
@@ -395,7 +395,7 @@
             text.push('</ul>'); 
             return text.join('');
           },
-          scales: {
+          data: {
               yAxes: [{
                   ticks: {
                       display: false,
