@@ -52,6 +52,15 @@ require_once('models/userModel.php');
             return false;
         }
     }
+
+    function getUser(){
+        $userId = $_SESSION['id'];
+        $userModel = new UserModel();
+        $user = $userModel->getUserById($userId);
+
+        return $user;
+
+    }
     
     function dropUser($userId){
         

@@ -1,3 +1,6 @@
+<?php
+        $user = getUser();
+      ?>
 <div class="container-scroller">
 
 <?php include_once('header.php'); ?>
