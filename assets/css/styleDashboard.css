@@ -2166,14 +2166,6 @@
   }
 }
 
-/*-------------------------------------------------------------------*/
-/* === Boostrap Main SCSS === */
-/*!
-   * Bootstrap v5.1.3 (https://getbootstrap.com/)
-   * Copyright 2011-2021 The Bootstrap Authors
-   * Copyright 2011-2021 Twitter, Inc.
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   */
 :root {
   --bs-blue: #5e50f9;
   --bs-indigo: #6610f2;
@@ -2572,12 +2564,7 @@ select:disabled {
   display: none;
 }
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
+
 button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
@@ -2632,10 +2619,7 @@ legend + * {
   height: auto;
 }
 
-[type="search"] {
-  outline-offset: -2px;
-  -webkit-appearance: textfield;
-}
+
 
 /* rtl:raw:
   [type="tel"],
@@ -4763,8 +4747,7 @@ textarea.form-control-lg {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-print-color-adjust: exact;
-  color-adjust: exact;
+
 }
 .form-check-input[type="checkbox"] {
   border-radius: 0.25em;
@@ -6563,7 +6546,7 @@ fieldset:disabled .btn {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #0d6efd;
+  color: #000000;
   text-decoration: none;
   -webkit-transition: color 0.15s ease-in-out,
     background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
@@ -6578,13 +6561,9 @@ fieldset:disabled .btn {
 }
 .nav-link:hover,
 .nav-link:focus {
-  color: #0a58ca;
+  color: #2eca6a;
 }
-.nav-link.disabled {
-  color: #6c757d;
-  pointer-events: none;
-  cursor: default;
-}
+
 
 .nav-tabs {
   border-bottom: 1px solid #ebedf2;
@@ -6602,7 +6581,7 @@ fieldset:disabled .btn {
   isolation: isolate;
 }
 .nav-tabs .nav-link.disabled {
-  color: #6c757d;
+
   background-color: transparent;
   border-color: transparent;
 }
@@ -9498,7 +9477,7 @@ fieldset:disabled .btn {
 }
 
 .link-primary {
-  color: #b66dff;
+  color: #2eca6a;
 }
 .link-primary:hover,
 .link-primary:focus {
@@ -9506,7 +9485,7 @@ fieldset:disabled .btn {
 }
 
 .link-secondary {
-  color: #c3bdbd;
+  color: #b66dff;
 }
 .link-secondary:hover,
 .link-secondary:focus {
@@ -14268,11 +14247,6 @@ body {
   overflow-x: hidden;
 }
 
-.form-control,
-.form-control:focus {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-}
 
 .form-control {
   -webkit-box-shadow: none;
@@ -15058,10 +15032,10 @@ code {
     linear,
     left top,
     right top,
-    from(#e7ebf0),
-    to(#868e96)
+    from(#2eca6a),
+    to(#166334)
   ) !important;
-  background: linear-gradient(to right, #e7ebf0, #868e96) !important;
+  background: linear-gradient(to right, #2eca6a, #166334) !important;
 }
 
 .bg-gradient-success {
@@ -18589,7 +18563,7 @@ dl li {
   .navbar-nav
   .nav-item.dropdown
   .dropdown-toggle:after {
-  color: #b66dff;
+  color: #2eca6a;
   font-size: 1rem;
 }
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .dropdown-menu {
@@ -19277,11 +19251,11 @@ dl li {
   background: #ffffff;
 }
 .sidebar .nav .nav-item.active > .nav-link .menu-title {
-  color: #b66dff;
+  color: #0009;
   font-family: "ubuntu-medium", sans-serif;
 }
 .sidebar .nav .nav-item.active > .nav-link i {
-  color: #b66dff;
+  color: #0009;
 }
 .sidebar .nav .nav-item:hover {
   background: #fcfcfc;
@@ -19370,7 +19344,7 @@ dl li {
   right: 0;
 }
 .sidebar .nav.sub-menu .nav-item .nav-link.active {
-  color: #b66dff;
+  color: #0009;
   background: transparent;
 }
 .sidebar .nav.sub-menu .nav-item .nav-link:hover {
@@ -19625,4 +19599,73 @@ dl li {
   flex-grow: 1;
 }
 
-/*# sourceMappingURL=style.css.map */
+.add-data-buttons{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin: 20px 0;
+  margin-bottom: 30px;
+
+}
+
+.add-data-buttons button{
+  --coolor: #2eca6a;
+  font-family: inherit;
+  display: inline-block;
+  width: 40%;
+  line-height: 2.5em;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--coolor);
+  transition: color .5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--coolor);
+ }
+ 
+ .add-data-buttons button:before  {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--coolor);
+  --size: 500px;
+  height: var(--size);
+  width: var(--size);
+  border-radius: 50%;
+ }
+ 
+ .add-data-buttons button:hover {
+  color: #fff;
+ }
+ 
+ .add-data-buttons button:before {
+  top: 100%;
+  left: 100%;
+  transition: all .7s;
+ }
+ 
+ .add-data-buttons button:hover:before {
+  top: -100px;
+  left: -50px;
+ }
+ 
+ .add-data-buttons button:active:before  {
+  background: #00ff00;
+  transition: background 0s;
+ }
+
+ .add-data-buttons button .hide{
+  opacity: 0;
+  margin: 0 0;
+  position: relative;
+  right: 50px;
+  transition: .5s ease;
+ }
+ .add-data-buttons button:hover .hide{
+  opacity: 100%;
+  margin: 0 50px;
+  
+
+ }
