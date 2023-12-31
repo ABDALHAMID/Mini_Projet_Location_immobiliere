@@ -44,9 +44,9 @@ class UserModel {
         return $userData;
     }
 
-    public function addUser($FirstName, $LastName, $Type){
+    public function addUser($FirstName, $LastName, $email, $password, $Type, $img){
         
-        $query = "INSERT INTO `utilisateur`(`id`, `prenom`, `nom`, `email`, `password`, `type`, `image`) VALUES ('NULL','$FirstName','$LastName','$Type','NULL')";
+        $query = "INSERT INTO `utilisateur`(`id`, `prenom`, `nom`, `email`, `password`, `image_path`, `type`) VALUES (NULL,'$FirstName','$LastName','$email','$password','$img','$Type')";
         $result = $this->db->query($query);
 
         if ($result) {
@@ -54,7 +54,7 @@ class UserModel {
             return true;
         } else {
             
-            echo "<script> console.log(Error adding user: " . $this->db->error. ")</script>";
+            echo "<script> console.log('Error adding user: " . $this->db->error. "')</script>";
             return false;
         }
 

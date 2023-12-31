@@ -8,10 +8,10 @@ require_once('controllers/logementController.php');
 
 if (isset($_GET['page'])) {
     if($_GET['page']=='logout'){
-        // remove all session variables
+        
 session_unset();
 
-// destroy the session
+
 session_destroy();
 
 
@@ -23,7 +23,7 @@ header("location:index.php");
 
 if (isset($_SESSION["type"])) {
     if($_SESSION["type"]==="administrator"){
-
+        echo '<script src="assets\js\dashboardStyle.js"></script>';
         
         include('view\admin\dashboard.php');
     }

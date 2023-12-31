@@ -22,7 +22,7 @@ if ($mysqli->connect_error) {
     die('Erreur de connexion à la base de données : ' . $mysqli->connect_error);
 }
 
-echo "<script>console.log('base de donnee est connecte')</script>";
+echo "<script>console.log('base de donnee est connecte');</script>";
 
 
 ?>

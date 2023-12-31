@@ -14,7 +14,7 @@
             <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                  <a href="index.html">Accuei</a>
+                  <a href="index.html">Accueil</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
                   Contact

@@ -24,16 +24,42 @@ require_once('models/userModel.php');
         
     }
 
-    function addUser($userFirstName, $userLastName, $userType){
-        
-        $userFirstName = trim($userFirstName);
-        $userFirstName = htmlspecialchars($userFirstName);
-        $userFirstName = stripslashes($userFirstName);
-        $userLastName = trim($userLastName);
-        $userLastName = htmlspecialchars($userLastName);
-        $userLastName = stripslashes($userLastName);
+    function addClient($userFirstName, $userLastName, $userEmail, $userPassword){
         $userModel = new UserModel();
-        $userModel->addUser($userFirstName, $userLastName, $userType);
+        $user = $userModel->getUserByEmail($userEmail);
+        if($user == null){
+            $userFirstName = trim($userFirstName);
+            $userFirstName = htmlspecialchars($userFirstName);
+            $userFirstName = stripslashes($userFirstName);
+            $userLastName = trim($userLastName);
+            $userLastName = htmlspecialchars($userLastName);
+            $userLastName = stripslashes($userLastName);
+            $uploadDir = 'assets/img/UsersImages/'; // Specify the directory where you want to store the uploaded files
+            $uploadPath = $uploadDir . basename(trim(htmlspecialchars(stripslashes($_FILES['profile_image']['name']))));
+            if (move_uploaded_file($_FILES['profile_image']['tmp_name'], $uploadPath)) {
+                //echo "<script>alert('File is valid, and was successfully uploaded.$uploadPath')</script>";
+                $addUser = $userModel->addUser($userFirstName, $userLastName, $userEmail, $userPassword, 'client',$_FILES['profile_image']['name']);
+                $thisUser = $userModel->getUserByEmail($userEmail);
+                $_SESSION["id"] = $thisUser["id"];
+                $_SESSION["type"] = $thisUser["type"];
+                return true;
+            } else {
+                echo "<script>console.log('Upload failed')</script>";
+            }        
+        }
+        else{
+
+            return false;
+        }
+    }
+
+    function getUser(){
+        $userId = $_SESSION['id'];
+        $userModel = new UserModel();
+        $user = $userModel->getUserById($userId);
+
+        return $user;
+
     }
     
     function dropUser($userId){
