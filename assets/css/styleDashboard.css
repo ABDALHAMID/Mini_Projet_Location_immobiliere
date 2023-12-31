@@ -19608,8 +19608,9 @@ dl li {
 
 }
 
-.add-data-buttons button{
+.add-data-buttons a{
   --coolor: #2eca6a;
+  text-decoration: none;
   font-family: inherit;
   display: inline-block;
   width: 40%;
@@ -19623,9 +19624,10 @@ dl li {
   border-radius: 6px;
   font-weight: 500;
   color: var(--coolor);
+  box-shadow: 0 0 0 #00ff00;
  }
  
- .add-data-buttons button:before  {
+ .add-data-buttons a:before  {
   content: "";
   position: absolute;
   z-index: -1;
@@ -19636,36 +19638,154 @@ dl li {
   border-radius: 50%;
  }
  
- .add-data-buttons button:hover {
+ .add-data-buttons a:hover {
   color: #fff;
+  box-shadow: 0 0 50px #00ff00;
  }
  
- .add-data-buttons button:before {
+ .add-data-buttons a:before {
   top: 100%;
   left: 100%;
   transition: all .7s;
  }
  
- .add-data-buttons button:hover:before {
+ .add-data-buttons a:hover:before {
   top: -100px;
   left: -50px;
  }
  
- .add-data-buttons button:active:before  {
+ .add-data-buttons a:active:before  {
   background: #00ff00;
   transition: background 0s;
  }
 
- .add-data-buttons button .hide{
+ .add-data-buttons a .hide{
   opacity: 0;
   margin: 0 0;
   position: relative;
-  right: 50px;
+  left: 0;
   transition: .5s ease;
  }
- .add-data-buttons button:hover .hide{
+ .add-data-buttons a:hover .hide{
   opacity: 100%;
-  margin: 0 50px;
+  margin: 0 60px;
   
 
  }
+ .back-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(100, 100, 100);
+  border: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.back-flech {
+  width: 25px;
+  font-size: 1.5rem;
+  transition-duration: .3s;
+  color: #fff;
+}
+
+.back-flech path {
+  fill: white;
+}
+
+.back-button:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: .3s;
+  background-color: rgb(69, 200, 200);
+  align-items: center;
+}
+
+.back-button:hover .back-flech {
+  width: 50px;
+  font-size: 1.3rem;
+  transition-duration: .3s;
+  transform: translateY(60%);
+}
+
+.back-button::before {
+  position: absolute;
+  top: -20px;
+  content: "BACK";
+  color: white;
+  transition-duration: .3s;
+  font-size: 2px;
+  
+}
+
+.back-button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  
+  transform: translateY(30px);
+  transition-duration: .3s;
+
+}
+
+.save-button {
+  font-family: inherit;
+  font-size: 20px;
+  background: rgb( 69, 180, 180);
+  color: white;
+  fill: rgb(155, 153, 153);
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 15px;
+  font-weight: 1000;
+}
+
+.save-button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.save-button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.save-button:hover {
+  background: rgb( 30, 200, 200);
+  
+}
+
+.save-button:hover .svg-wrapper {
+  transform: scale(1.25);
+  transition: .5s linear;
+}
+
+.save-button:hover svg {
+  transform: translateX(1.15em) scale(1.2);
+  fill: #fff;
+}
+
+.save-button:hover span {
+  opacity: 0;
+  transition: .5s linear;
+}
+
+.save-button:active {
+  transform: scale(0.95);
+}
+
+
+
+
+

@@ -25,33 +25,55 @@ require_once('models/userModel.php');
     }
 
     function addClient($userFirstName, $userLastName, $userEmail, $userPassword){
+        $user = addUser($userFirstName, $userLastName, $userEmail, $userPassword, 'client');
+        if($user['status']==ture){
+            $userModel = new UserModel();
+            $thisUser = $userModel->getUserByEmail($userEmail);
+            $_SESSION["id"] = $thisUser["id"];
+            $_SESSION["type"] = $thisUser["type"];
+        }
+        return $user;
+    }
+    function addAdmin($userFirstName, $userLastName, $userEmail, $userPassword){
+        return addUser($userFirstName, $userLastName, $userEmail, $userPassword, 'administrator');
+    }
+
+
+    function addUser($userFirstName, $userLastName, $userEmail, $userPassword, $type){
         $userModel = new UserModel();
         $user = $userModel->getUserByEmail($userEmail);
-        if($user == null){
+        
+        if ($user == null) {
             $userFirstName = trim($userFirstName);
             $userFirstName = htmlspecialchars($userFirstName);
             $userFirstName = stripslashes($userFirstName);
             $userLastName = trim($userLastName);
             $userLastName = htmlspecialchars($userLastName);
             $userLastName = stripslashes($userLastName);
-            $uploadDir = 'assets/img/UsersImages/'; // Specify the directory where you want to store the uploaded files
-            $uploadPath = $uploadDir . basename(trim(htmlspecialchars(stripslashes($_FILES['profile_image']['name']))));
-            if (move_uploaded_file($_FILES['profile_image']['tmp_name'], $uploadPath)) {
-                //echo "<script>alert('File is valid, and was successfully uploaded.$uploadPath')</script>";
-                $addUser = $userModel->addUser($userFirstName, $userLastName, $userEmail, $userPassword, 'client',$_FILES['profile_image']['name']);
-                $thisUser = $userModel->getUserByEmail($userEmail);
-                $_SESSION["id"] = $thisUser["id"];
-                $_SESSION["type"] = $thisUser["type"];
-                return true;
+    
+            
+            if (isset($_FILES['profile_image']) && $_FILES['profile_image']['error'] == UPLOAD_ERR_OK) {
+                $uploadDir = 'assets/img/UsersImages/';
+                $uploadPath = $uploadDir . basename(trim(htmlspecialchars(stripslashes($_FILES['profile_image']['name']))));
+    
+                if (move_uploaded_file($_FILES['profile_image']['tmp_name'], $uploadPath)) {
+                    $imageName = $_FILES['profile_image']['name'];
+                } else {
+                    return array("status" => false, "message" => "Image non valide!");
+                }
             } else {
-                echo "<script>console.log('Upload failed')</script>";
-            }        
-        }
-        else{
-
-            return false;
+                
+                $imageName = 'default.jpg';
+            }
+    
+            $addUser = $userModel->addUser($userFirstName, $userLastName, $userEmail, $userPassword, $type, $imageName);
+    
+            return array("status" => true, "message" => "Utilisateur a été ajouté!");
+        } else {
+            return array("status" => false, "message" => "Utilisateur déjà trouvé!");
         }
     }
+    
 
     function getUser(){
         $userId = $_SESSION['id'];

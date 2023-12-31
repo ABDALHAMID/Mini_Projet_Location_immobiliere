@@ -54,3 +54,4 @@ class LogementModel {
         return $result;
     }
 }
+?>

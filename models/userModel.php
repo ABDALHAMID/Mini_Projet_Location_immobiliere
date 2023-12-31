@@ -8,8 +8,8 @@ class UserModel {
     }
 
     private function connectToDatabase() {
-        require_once('database_connection.php');
-        return $mysqli;
+            require('database_connection.php');
+            return $mysqli;
     }
 
     public function getUsers(){

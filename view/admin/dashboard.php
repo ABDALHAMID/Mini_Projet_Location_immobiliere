@@ -9,8 +9,21 @@
 <div class="container-fluid page-body-wrapper">
 
 <?php 
-    include('sidebar.php');   
-    include('mainPanel.php');
+    include('sidebar.php');
+    if (isset($_GET['page'])) {
+      switch ($_GET['page']) {
+          case 'adduser':
+              include('adduser.php');
+              break;  
+          default:
+            include('mainPanel.php');
+              break;
+      }
+    }
+    else{
+      include('mainPanel.php');
+    }
+    
 ?>
 
       </div>

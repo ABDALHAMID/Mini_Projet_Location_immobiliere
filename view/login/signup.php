@@ -5,21 +5,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   $fname = $_POST["firstname"];
   $email = $_POST["email"];
   $pwd = $_POST["password"];
-  if(addClient($fname, $name, $email, $pwd)){
+  $userStatus = addClient($fname, $name, $email, $pwd);
+  if($userStatus["status"]){
         header("location: index.php");
-        $status = true;
+
         exit();
       }
-      else{
-        $status = false;
-      }
+
 }
 ?>
 <main id="main">
 
   
 <!-- partial:index.partial.html --> 
-<div style="display: flex;justify-content: center;align-items: center;min-height: 170vh;background: #fff;">
+<div style="display: flex;justify-content: center;align-items: center;min-height: 150vh;background: #fff;">
 <section class="signup-section"> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
 
 <div class="signin" > 
@@ -28,17 +27,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   <h2>Sign Un</h2> 
 
-  <?php
-  if(isset($status) && $status === false){
+                <?php
+                if(isset($userStatus["status"])){
 
-      echo '<div class="alert alert-danger d-flex align-items-center" role="alert" style="display: flex;justify-content: space-between;" >
-      <i class="bi bi-exclamation-triangle-fill"></i>
-      <div>
-        E-mail deja exest !!! Veuillez réessayer
-      </div>
-    </div>';
-    }
-  ?>
+                    echo '<div class="alert ';
+                    if($userStatus["status"]) echo 'alert-success';
+                    else echo 'alert-danger';
+                    echo ' d-flex align-items-center justify-content-center" role="alert" style="display: flex;justify-content: space-between;" >
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+                    <div><p>
+                    '.$userStatus["message"].'</p>
+                    </div>
+                  </div>';
+                  }
+                ?>
 
   <form class="form" action="<?php echo $_SERVER['PHP_SELF'].'?page=signup'; ?>" method="post" enctype="multipart/form-data">
 
