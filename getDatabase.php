@@ -13,7 +13,8 @@ $mysqli = new mysqli($host . ':' . $port, $user, $password);
 if ($mysqli->connect_error) {
     die('Erreur de connexion à la base de données : ' . $mysqli->connect_error);
 }
-
+$requeteCreationDB = "DROP DATABASE IF EXISTS `location_immobiliere`;";
+$dbCreation = $mysqli->query($requeteCreationDB);
 // Création de la base de données
 $requeteCreationDB = "CREATE DATABASE IF NOT EXISTS `location_immobiliere`;";
 $dbCreation = $mysqli->query($requeteCreationDB);
