@@ -567,50 +567,76 @@
   .login-button:active {
     transform: scale(0.93);
   }
-
+  
   .signup-button {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 2px solid rgb(61, 255, 69);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
     width: 5rem;
     height: 2.5rem;
-    position: relative;
-    border: 3px ridge #00da00;
-    outline: none;
-    background-color: transparent;
-    color: black;
-    transition: 1s;
-    border-radius: 0.3em ;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .signup-button::after {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 3%;
-    width: 95%;
-    height: 40%;
-    background-color: #212121;
-    transition: 0.5s;
-    transform-origin: center;
-  }
-  
-  .signup-button::before {
-    content: "";
-    transform-origin: center;
-    position: absolute;
-    top: 80%;
-    left: 3%;
-    width: 95%;
-    height: 40%;
-    background-color: #212121;
-    transition: 0.5s;
-  }
-  
-  .signup-button:hover::before, .signup-button:hover::after {
-    transform: scale(0)
+    letter-spacing: 2px;
+    background: transparent;
+    color: rgb(61, 255, 69);;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
   
   .signup-button:hover {
-    box-shadow: inset 0px 0px 25px #1479EA;
+    background: rgb(61, 255, 106);
+    color: #f4f4f4;
+    box-shadow: 0 0 30px 5px rgba(0, 255, 0,1);
+  }
+  
+  .signup-button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  .signup-button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  .signup-button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
   }
   
