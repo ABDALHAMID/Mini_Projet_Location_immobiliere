@@ -1,14 +1,15 @@
 <?php
 
 class LogementModel {
+    private $db;
 
     public function __construct() {
         $this->db = $this->connectToDatabase();
     }
 
     private function connectToDatabase() {
-        require_once('database_connection.php');
-        return $mysqli;
+        
+        return getDatabase();
     }
 
 

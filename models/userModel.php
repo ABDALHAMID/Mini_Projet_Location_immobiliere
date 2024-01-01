@@ -2,14 +2,14 @@
 
 
 class UserModel {
-
+    private $db;
     public function __construct() {
         $this->db = $this->connectToDatabase();
     }
 
     private function connectToDatabase() {
-            require('database_connection.php');
-            return $mysqli;
+            
+            return getDatabase();
     }
 
     public function getUsers(){

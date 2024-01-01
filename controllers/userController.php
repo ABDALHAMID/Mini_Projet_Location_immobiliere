@@ -26,7 +26,7 @@ require_once('models/userModel.php');
 
     function addClient($userFirstName, $userLastName, $userEmail, $userPassword){
         $user = addUser($userFirstName, $userLastName, $userEmail, $userPassword, 'client');
-        if($user['status']==ture){
+        if($user['status']==true){
             $userModel = new UserModel();
             $thisUser = $userModel->getUserByEmail($userEmail);
             $_SESSION["id"] = $thisUser["id"];

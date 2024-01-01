@@ -1,19 +1,23 @@
 <?php
 
-class CommentaireModel {
-    
+class CommentaireModel
+{
 
-    public function __construct() {
+    private $db;
+
+    public function __construct()
+    {
         $this->db = $this->connectToDatabase();
     }
 
-    private function connectToDatabase() {
-        require_once('database_connection.php');
-        return $mysqli;
-    }
+    private function connectToDatabase()
+    {
+        return getdate();
     }
 
-    public function getAllCommentaires() {
+
+    public function getAllCommentaires()
+    {
         $query = "SELECT * FROM commentaires";
         $result = $this->db->query($query);
 
@@ -25,7 +29,8 @@ class CommentaireModel {
         return $commentaires;
     }
 
-    public function addCommentaire($commentaire) {
+    public function addCommentaire($commentaire)
+    {
         $query = "INSERT INTO commentaires (`Commentaire`, `DateCommentaire`) VALUES (?, current_timestamp())";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param("s", $commentaire);
