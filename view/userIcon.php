@@ -9,13 +9,13 @@ if (isset($_SESSION["id"]) && isset($_SESSION["type"])) {
             <div class="active-user-content-avatar">
                <div class="active-user-status-user"></div>
                <div class="active-user-avatar">
-                  <img class="active-user-user-img" src="assets/img/UsersImages/'.$user['image_path'].'">
+                  <img class="active-user-user-img" src="assets/img/UsersImages/' . $user['image_path'] . '">
                </div>
             </div>
             <div class="active-user-notice-content">
-               <div class="active-user-username">'.$user['nom'].' '.$user['prenom'].'</div>
+               <div class="active-user-username">' . $user['nom'] . ' ' . $user['prenom'] . '</div>
                <div class="active-user-lable-message">profile</div>
-               <div class="active-user-user-id">'.$user['email'].'</div>
+               <div class="active-user-user-id">' . $user['email'] . '</div>
             </div>
          </button>
          </div>';
@@ -32,13 +32,16 @@ if (isset($_SESSION["id"]) && isset($_SESSION["type"])) {
    echo '</div>';
 
 } else {
+   echo '<div class="user-fild">';
    echo '
-    <a href="' . htmlspecialchars($_SERVER['PHP_SELF']) . '?page=signup' . '" class="btn btn btn-success mr-2">
-       signup
-    </a>
-    <a href="' . htmlspecialchars($_SERVER['PHP_SELF']) . '?page=login' . '" class="btn btn-outline-success mr-2">
-       login
-    </a>';
+         <a href="' . htmlspecialchars($_SERVER['PHP_SELF']) . '?page=signup' . '" class="btn btn btn-success mr-2">
+            signup
+         </a>';
+   echo '
+      <a href="' . htmlspecialchars($_SERVER['PHP_SELF']) . '?page=login' . '" class="login-button">
+         <span><i class="bi bi-box-arrow-in-right"></i> LogIn</span>
+      </a>';
+   echo '</div>';
 }
 
 
