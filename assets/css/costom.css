@@ -509,6 +509,8 @@
   
   .login-button i {
     color: black;
+    position: absolute;
+    left: -50%;
     font-weight: 800;
     font-size: 1.2rem;
     z-index: 11;
@@ -524,6 +526,10 @@
     font-size: 1rem;
     padding: 0.8em 1.2em 0.8em 1.05em;
     transition: .1s ease;
+  }
+
+  .login-button:hover span{
+    color: transparent;
   }
 
   
@@ -548,9 +554,9 @@
 
   }
   .login-button:hover i{
-    transform: translateX(50%);
-    margin-right: 1em;
-    
+    left: 30%;
+    font-weight: 800;
+    font-size: 1.5rem;
     color: #f4f4f4;
   }
   .login-button:hover::before {
@@ -560,5 +566,51 @@
   
   .login-button:active {
     transform: scale(0.93);
+  }
+
+  .signup-button {
+    width: 5rem;
+    height: 2.5rem;
+    position: relative;
+    border: 3px ridge #00da00;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    transition: 1s;
+    border-radius: 0.3em ;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .signup-button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #212121;
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  
+  .signup-button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #212121;
+    transition: 0.5s;
+  }
+  
+  .signup-button:hover::before, .signup-button:hover::after {
+    transform: scale(0)
+  }
+  
+  .signup-button:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
   }
   

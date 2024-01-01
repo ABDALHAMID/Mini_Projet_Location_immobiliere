@@ -34,13 +34,16 @@ if (isset($_SESSION["id"]) && isset($_SESSION["type"])) {
 } else {
    echo '<div class="user-fild">';
    echo '
-         <a href="' . htmlspecialchars($_SERVER['PHP_SELF']) . '?page=signup' . '" class="btn btn btn-success mr-2">
+      <div>
+         <a href="' . htmlspecialchars($_SERVER['PHP_SELF']) . '?page=signup' . '" class="signup-button">
             signup
-         </a>';
-   echo '
+         </a>
+         </div>';
+   echo '<div>
       <a href="' . htmlspecialchars($_SERVER['PHP_SELF']) . '?page=login' . '" class="login-button">
          <span><i class="bi bi-box-arrow-in-right"></i> LogIn</span>
-      </a>';
+      </a>
+      </div>';
    echo '</div>';
 }
 
