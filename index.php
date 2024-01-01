@@ -21,6 +21,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
+  <link rel="stylesheet" href="assets/css/costom.css">
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
