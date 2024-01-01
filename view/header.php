@@ -1,4 +1,3 @@
-
 <div class="click-closed"></div>
 
 <?php
@@ -8,30 +7,35 @@
 ?>
 <!-- ======= Header/Navbar ======= -->
 <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
-    <div class="container">
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <a class="navbar-brand text-brand" href="<?php echo $_SERVER['PHP_SELF'] ?>">RENT <span class="color-b">IT</span></a>
+  <div class="container">
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault"
+      aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <a class="main-logo-button navbar-brand" data-text="Awesome" href="<?php echo $_SERVER['PHP_SELF'] ?>">
+      <span class="actual-text">&nbsp;RENT&nbsp;IT&nbsp;</span>
+      <span aria-hidden="true" class="main-logo-button-hover-text">&nbsp;RENT&nbsp;IT&nbsp;</span>
+    </a>
 
-      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
-        <ul class="navbar-nav">
 
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo $_SERVER['PHP_SELF'] ?>">Accueil</a>
-          </li>
+    <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+      <ul class="navbar-nav">
 
-          <li class="nav-item">
-            <a class="nav-link " href="<?php echo $_SERVER['PHP_SELF'] . "?page=about" ?>">A propos</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo $_SERVER['PHP_SELF'] ?>">Accueil</a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link " href="<?php echo $_SERVER['PHP_SELF'] . "?page=all_properties" ?>">Logement</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link " href="<?php echo $_SERVER['PHP_SELF'] . "?page=about" ?>">A propos</a>
+        </li>
 
-          <!-- <li class="nav-item">
+        <li class="nav-item">
+          <a class="nav-link " href="<?php echo $_SERVER['PHP_SELF'] . "?page=all_properties" ?>">Logement</a>
+        </li>
+
+        <!-- <li class="nav-item">
             <a class="nav-link " href="blog-grid.html">Blog</a>
           </li>
 
@@ -44,20 +48,19 @@
               <a class="dropdown-item " href="agent-single.html">Bureau</a>
             </div>
           </li> -->
-          <li class="nav-item">
-            <a class="nav-link " href="<?php echo $_SERVER['PHP_SELF'] . "?page=contactUs" ?>">Contact</a>
-          </li>
-        </ul>
-        
-      </div>
-      <?php
-        include("view\userIcon.php");
-      ?>
-      <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
-        <i class="bi bi-search"></i>
-      </button>
+        <li class="nav-item">
+          <a class="nav-link " href="<?php echo $_SERVER['PHP_SELF'] . "?page=contactUs" ?>">Contact</a>
+        </li>
+      </ul>
 
     </div>
-  </nav><!-- End Header/Navbar -->
+    <?php
+    include("view\userIcon.php");
+    ?>
+    <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo01">
+      <i class="bi bi-search"></i>
+    </button>
 
-
+  </div>
+</nav><!-- End Header/Navbar -->
