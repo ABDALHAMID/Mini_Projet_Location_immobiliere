@@ -6,6 +6,8 @@ require_once('controllers/userController.php');
 
 require_once('controllers/logementController.php');
 
+require_once('controllers/locationOrderController.php');
+
 if (isset($_GET['page'])) {
     if($_GET['page']=='logout'){
         
@@ -31,8 +33,11 @@ if (isset($_SESSION["type"])) {
         
         include('view\client\clientHome.php');
     }
+    $isLogin = true;
 } else {
     include('view\client\clientHome.php');
+    $isLogin = false;
+
 }
 
 

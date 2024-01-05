@@ -1382,6 +1382,7 @@ a:hover {
 
 .card-footer-a {
   width: 100%;
+  min-height: 100px;
   position: absolute;
   z-index: 2;
   background-color: #2eca6a;

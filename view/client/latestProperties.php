@@ -1,5 +1,5 @@
 <?php
-    $logements = lastLogement(10);
+    $logements = lastLogement(5);
 ?>
 <!-- ======= Latest Properties Section ======= -->
 <section class="section-property section-t8" id="logement">
@@ -43,7 +43,13 @@
                             <div class="price-box d-flex">
                               <span class="price-a">rent | $'.$logement['prix'].'</span>
                             </div>
-                            <a href="'.$_SERVER['PHP_SELF'].'?page=logement&id='.$logement['id'].'" class="link-a">Click ici<span class="bi bi-chevron-right"></span></a>
+                            <a href="'.$_SERVER['PHP_SELF'].'?page=logement&id='.$logement['id'].'" class="learn-more" >
+                                <span class="learn-more-circle" aria-hidden="true">
+                                  <span class="learn-more-icon arrow"></span>
+                                </span>
+                                <span class="learn-more-button-text">Learn More</span>
+                              
+                            </a>
                           </div>
                           <div class="card-footer-a">
                             <ul class="card-info d-flex justify-content-around">

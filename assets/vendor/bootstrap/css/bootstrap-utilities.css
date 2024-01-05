@@ -791,6 +791,10 @@
   top: 0 !important;
 }
 
+.top-30 {
+  top: 30px !important;
+}
+
 .top-50 {
   top: 50% !important;
 }

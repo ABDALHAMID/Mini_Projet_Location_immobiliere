@@ -733,3 +733,335 @@
       transform: translateY(10px);
     }
   }
+
+  .learn-more {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    width: 60%;
+   }
+   
+   
+   .learn-more .learn-more-circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #26a356;
+    border-radius: 1.625rem;
+   }
+   
+   .learn-more .learn-more-circle .learn-more-icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   .learn-more .learn-more-circle .learn-more-icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   .learn-more .learn-more-circle .learn-more-icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   .learn-more .learn-more-button-text {
+    transition: 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 30px;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #26a356;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: left;
+    text-transform: uppercase;
+   }
+
+
+   
+   .learn-more:hover .learn-more-circle {
+    width: 100%;
+    background: #00da00;
+    box-shadow: 0 0 30px 5px #0f0;
+   }
+   
+   .learn-more:hover .learn-more-circle .learn-more-icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   .learn-more:hover .learn-more-button-text {
+    color: #fff;
+
+   }
+   .rent-it-button-contaner{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1000;
+    margin: 20px;
+    background-color: transparent;
+    animation: rent-it-button-contaner-animation 2s linear infinite alternate-reverse ;
+  }
+
+    @keyframes rent-it-button-contaner-animation{
+      0%{
+        transform: scale(1);
+      }
+      4%{
+        transform: scale(1.1);
+      }
+      8%{
+        transform: scale(1);
+      }
+    }  
+
+
+   .rentitButton {
+    padding: 1.1em 2em;
+    background: none;
+    border: 2px solid #fff;
+    font-size: 15px;
+    color: #131313;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 12px;
+    background-color: #93e200aa;
+    font-weight: bolder;
+    transform: rotate3d(0);
+    box-shadow: 0 10px 0 2px #000;
+   }
+   
+   .rentitButton:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 120%;
+    background-color: #FFD700;
+
+    top: 50%;
+    transform: skewX(30deg) translate(-150%, -50%);
+    transition: all 0.5s;
+   }
+   
+   .rent-it-button-contaner:hover .rentitButton {
+    background-color: #93e200;
+    color: #fff;
+    transform: rotate3d(1, 0, 0, 45deg);
+    box-shadow: 0 0px 10px 5px #00ff00;
+   }
+   
+   .rent-it-button-contaner:hover .rentitButton::before {
+    transform: skewX(30deg) translate(150%, -50%);
+    transition-delay: 0.1s;
+   }
+   
+   .rentitButton:active {
+    transform: scale(0.9);
+   }
+
+   .rent-it-button-contaner span{
+    position: absolute;
+    font-size: 5rem;
+    z-index: -10;
+    color: #00da00;
+    transform: translate(30%, -10%) rotate(2deg);
+    opacity: 0;
+    top: 0%;
+    transition: .4s linear;
+    
+  }
+  .rent-it-button-contaner:hover span{
+    transform: translate(30%, -80%);
+    animation: rent-it-button 2s ease-in infinite alternate-reverse ;
+    top: -100%;
+    opacity: 100%;
+   }
+  @keyframes rent-it-button{
+    from{
+      transform: translate(30%, -10%) rotate(3deg);
+      text-shadow: 1px 1px #000,
+      -1px -1px #000,
+      1px -1px #000,
+      -1px 1px #000,
+       0 0 30px #0f0;
+
+    }
+    to{
+      transform: translate(30%, -10%) rotate(-3deg);
+      text-shadow: 1px 1px #000,
+      -1px -1px #000,
+      1px -1px #000,
+      -1px 1px #000,
+      0 0 50px #69da69;
+    }
+  }
+
+  .notAllowedButton {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1000;
+    margin: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 15px 20px;
+    background-color: #212121;
+    border: none;
+    font: inherit;
+    color: #e8e8e8;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: not-allowed;
+    overflow: hidden;
+    transition: all 0.3s ease cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .notAllowedButton span {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+  }
+  
+  .notAllowedButton::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    translate: 0 105%;
+    background-color: #F53844;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .notAllowedButton svg {
+    width: 32px;
+    height: 32px;
+    fill: #F53844;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .notAllowedButton:hover {
+    animation: shake 0.2s linear 1;
+  }
+  
+  .notAllowedButton:hover::before {
+    translate: 0 0;
+  }
+  
+  .notAllowedButton:hover svg {
+    fill: #e8e8e8;
+  }
+  
+  @keyframes shake {
+    0% {
+      rotate: 0deg;
+    }
+  
+    33% {
+      rotate: 10deg;
+    }
+  
+    66% {
+      rotate: -10deg;
+    }
+  
+    100% {
+      rotate: 10deg;
+    }
+  }
+
+  .deRentItButton {
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .deRentItButton:hover {
+    box-shadow: .5px .5px 150px #252525;
+  }
+  
+  .deRentItButton-type1::after {
+    content: "are you sure";
+    height: 50px;
+    width: 150px;
+    background-color: #008080;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .deRentItButton-type1::before {
+    content: "Hover Me";
+    height: 50px;
+    width: 150px;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .deRentItButton-type1:hover::after {
+    transform: translateY(0) scale(1.2);
+  }
+  
+  .deRentItButton-type1:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+  }
+
