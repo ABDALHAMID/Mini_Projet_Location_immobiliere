@@ -1,5 +1,11 @@
 <?php
-require 'vendor/autoload.php'; 
+require './assets/vendor/PHPMailer-master/src/Exception.php';
+require './assets/vendor/PHPMailer-master/src/PHPMailer.php';
+require './assets/vendor/PHPMailer-master/src/SMTP.php';
+
+ 
+ use PHPMailer\PHPMailer\PHPMailer;
+ use PHPMailer\PHPMailer\Exception;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer les données du formulaire
@@ -18,15 +24,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Envoyer l'e-mail
     $mail = new PHPMailer(true);
-    var_dump($mail);
+
     try {
         // Paramètres SMTP
         $mail->isSMTP();
-        $mail->Host       = 'smtp.example.com'; // Remplacez par le serveur SMTP de votre hébergeur
+        $mail->Host       = 'smtp.gmail.com'; // Remplacez par le serveur SMTP de votre hébergeur
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'votre@email.com'; // Remplacez par votre adresse e-mail SMTP
-        $mail->Password   = 'votreMotDePasse'; // Remplacez par votre mot de passe SMTP
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Peut être PHPMailer::ENCRYPTION_SMTPS aussi
+        $mail->Username   = 'rentit.projet@gmail.com'; // Remplacez par votre adresse e-mail SMTP
+        $mail->Password   = 'rentit123'; // Remplacez par votre mot de passe SMTP
+        $mail->SMTPSecure = 'tls'; // Peut être PHPMailer::ENCRYPTION_SMTPS aussi
         $mail->Port       = 587; // Utilisez le port SMTP correct (25, 587, etc.)
 
         // Destinataire et contenu de l'e-mail
@@ -38,6 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Envoyer l'e-mail
         $mail->send();
+        echo 'Le message a été envoyé avec succès.';
+        
 
         // Redirection si l'e-mail est envoyé avec succès
         header("Location: index.php?page=contactUs");
