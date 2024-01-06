@@ -1,4 +1,5 @@
 <?php
+$user=getClient();
 ?>
 <div class="row">
 <div class="col-12 grid-margin">
@@ -17,50 +18,23 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>
-                <img src="assets/images/faces/face1.jpg" class="me-2" alt="image"> Bahan
-              </td>
-              <td> Kaoutar </td>
-              <td>
-                <label class="badge badge-gradient-success">client</label>
-              </td>
-              <td> kaoutar@gmail.com </td>
-              
-            </tr>
-            <tr>
-              <td>
-                <img src="assets/images/faces/face2.jpg" class="me-2" alt="image"> Bouihi
-              </td>
-              <td> Taha </td>
-              <td>
-                <label class="badge badge-gradient-warning">client</label>
-              </td>
-              <td> taha@gmail.com </td>
-              <
-            </tr>
-            <tr>
-              <td>
-                <img src="assets/images/faces/face3.jpg" class="me-2" alt="image"> Aouli
-              </td>
-              <td> Abdeljalil</td>
-              <td>
-                <label class="badge badge-gradient-info">client</label>
-              </td>
-              <td> abdeljalil@gmail.com </td>
-              
-            </tr>
-            <tr>
-              <td>
-                <img src="assets/images/faces/face4.jpg" class="me-2" alt="image">Mojahid
-              </td>
-              <td> Hamza </td>
-              <td>
-                <label class="badge badge-gradient-danger">client</label>
-              </td>
-              <td> hamza@gmail.com </td>
-              
-            </tr>
+          <?php
+                            foreach ($user as $a) {
+                              
+                              echo'
+                              <tr>
+                              <td>
+                              <img src="assets/img/UsersImages/'.$a['image_path'].'" class="me-2" alt="image"> '.$a['nom'].'
+                              </td>
+                              <td> '.$a['prenom'].' </td>
+                              <td>
+                              <label class="badge badge-gradient-success">ADMIN</label>
+                              </td>
+                              <td> '.$a['email'].' </td>
+                              
+                              </tr>';
+                            }
+                            ?>
           </tbody>
         </table>
       </div>

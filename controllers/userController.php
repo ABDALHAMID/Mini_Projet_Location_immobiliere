@@ -106,7 +106,7 @@ require_once('models/userModel.php');
         $users = [];
         foreach($admins as $admin){
             if($admin['type']=='client')
-            $admins[] = $admin;
+            $users[] = $admin;
         }
         return $users;
 
