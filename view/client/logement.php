@@ -1,5 +1,7 @@
 <?php
 $logement = getLogement($_GET['id']);
+$aminoties = getLAmenities();
+$LImages = getLImages();
 ?>
 
 <main id="main">
@@ -145,7 +147,7 @@ $logement = getLogement($_GET['id']);
                   <?php echo $logement['description'] ?>
                 </p>
               </div>
-                <?php include('rentButton.php'); ?>
+              <?php include('rentButton.php'); ?>
 
               <div class="row section-t3">
                 <div class="col-sm-12">
@@ -156,15 +158,12 @@ $logement = getLogement($_GET['id']);
               </div>
               <div class="amenities-list color-text-a">
                 <ul class="list-a no-margin">
-                  <li>Balcone</li>
-                  <li>Cuissin exterieur</li>
-                  <li> Tv cable</li>
-                  <li>Deck</li>
-                  <li>Tennis Courts</li>
-                  <li>Internet</li>
-                  <li>Parking</li>
-                  <li>Sun Room</li>
-                  <li>Concrete Flooring</li>
+                  <?php
+                  foreach ($aminoties as $amin) {
+
+                    echo '<li>' . $amin['amenity'] . '</li>';
+                  }
+                  ?>
                 </ul>
               </div>
             </div>
@@ -192,12 +191,13 @@ $logement = getLogement($_GET['id']);
                 <div class="col-lg-8">
                   <div id="property-single-carousel" class="swiper">
                     <div class="swiper-wrapper">
-                      <div class="carousel-item-b swiper-slide">
-                        <img src="assets/img/property-7.jpg" alt="">
-                      </div>
-                      <div class="carousel-item-b swiper-slide">
-                        <img src="assets/img/property-5.jpg" alt="">
-                      </div>
+                      <?php
+                      foreach ($LImages as $img) {
+                        echo '<div class="swiper-slide my-carousel-style">';
+                        echo '<img src="assets/img/' . $img['image_path'] . '" alt="">';
+                        echo '</div>';
+                      }
+                      ?>
                     </div>
                   </div>
                   <div class="property-single-carousel-pagination carousel-pagination"></div>
