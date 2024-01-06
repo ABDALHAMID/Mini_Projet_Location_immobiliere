@@ -21,7 +21,7 @@
                 <div class="card-box-ico-style">
                   <span class="bi bi-cart"></span>
                 </div>
-                <div class="card-inner"><span>Mode de vie</span>
+                <div class="card-inner"><span>Mode de vie:</span>
               </div>
               </div>
             </div>
