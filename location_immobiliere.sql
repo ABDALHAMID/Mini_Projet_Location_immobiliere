@@ -55,7 +55,7 @@ CREATE TABLE `location_order` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE `commentaires` (
-  `Num` int(11) NOT NULL AUTO_INCREMENT,
+  `Num` int(11) NOT NULL ,
   `id` int(11) NOT NULL,
   `Commentaire` text NOT NULL,
   `DateCommentaire` timestamp NOT NULL DEFAULT current_timestamp()

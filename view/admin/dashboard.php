@@ -15,6 +15,15 @@
           case 'adduser':
               include('adduser.php');
               break;  
+              case 'addlogement':
+                include('addLogement.php');
+                break;  
+                case 'adminList':
+                  include('adminList.php');
+                  break;  
+                  case 'clientList':
+                    include('clientList.php');
+                    break;  
           default:
             include('mainPanel.php');
               break;
