@@ -90,6 +90,28 @@ require_once('models/userModel.php');
         return $user;
 
     }
+    function getAdmins(){
+        $userModel = new UserModel();
+        $admins = $userModel->getUsers();
+        $users = [];
+        foreach($admins as $admin){
+            if($admin['type']=='administrator')
+            $admins[] = $admin;
+        }
+        return $users;
+
+    }
+    function getClient(){
+        $userModel = new UserModel();
+        $admins = $userModel->getUsers();
+        $users = [];
+        foreach($admins as $admin){
+            if($admin['type']=='client')
+            $admins[] = $admin;
+        }
+        return $users;
+
+    }
     function numberofadmins(){
         $userModel = new UserModel();
         $user = $userModel->getUsers();
