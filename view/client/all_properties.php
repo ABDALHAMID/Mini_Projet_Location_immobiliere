@@ -52,7 +52,7 @@
             <div class="col-md-4">
               <div class="card-box-a card-shadow">
                 <div class="img-box-a">
-                  <img src="assets/img/'.$logement["image_path"].'" alt="'.$logement['name'].', '.$logement['adresse'].', '.$logement['city'].'" class="img-a img-fluid">
+                  <img src="assets/img/LogementImages/'.$logement["image_path"].'" alt="'.$logement['name'].', '.$logement['adresse'].', '.$logement['city'].'" class="img-a img-fluid">
                 </div>
                 <div class="card-overlay">
                   <div class="card-overlay-a-content">

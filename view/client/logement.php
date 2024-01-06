@@ -194,7 +194,7 @@ $LImages = getLImages();
                       <?php
                       foreach ($LImages as $img) {
                         echo '<div class="swiper-slide my-carousel-style">';
-                        echo '<img src="assets/img/' . $img['image_path'] . '" alt="">';
+                        echo '<img src="assets/img/LogementImages/' . $img['image_path'] . '" alt="">';
                         echo '</div>';
                       }
                       ?>

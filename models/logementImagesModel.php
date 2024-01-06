@@ -27,7 +27,17 @@ class LogementImagesModel
         while ($row = $result->fetch_assoc()) {
             $images[] = $row;
         }
-            return $images;
+        return $images;
+    }
+
+    public function addImage($logement_id, $image_path)
+    {
+        $query = "INSERT INTO logement_images(id, logement_id, image_path) VALUES (NULL,'$logement_id','$image_path')";
+        $result = $this->db->query($query);
+        if (!$result) {
+            die($this->db->error);
+        }
+        return $result;
     }
 
 }

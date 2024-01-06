@@ -30,6 +30,15 @@ class LogementAmenitiesModel
             return $amenities;
     }
 
+    public function addAmenities($logement_id,$aminotie){
+        $query = "INSERT INTO logement_amenities(id, logement_id, amenity) VALUES (NULL,'$logement_id','$aminotie')";
+        $result = $this->db->query($query);
+        if (!$result) {
+            die($this->db->error);
+        }
+        return $result;
+    }
+
 }
 
 ?>
