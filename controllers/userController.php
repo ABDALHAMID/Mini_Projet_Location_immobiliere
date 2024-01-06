@@ -95,8 +95,7 @@ require_once('models/userModel.php');
         $admins = $userModel->getUsers();
         $users = [];
         foreach($admins as $admin){
-            if($admin['type']=='administrator')
-            $admins[] = $admin;
+            if($admin['type']=='administrator')$users[] = $admin;
         }
         return $users;
 

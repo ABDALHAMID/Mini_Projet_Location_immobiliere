@@ -1,3 +1,7 @@
+<?php
+$admin=getAdmins();
+
+?>
 <div class="row">
               <div class="col-12 grid-margin">
                 <div class="card">
@@ -15,40 +19,23 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td>
-                              <img src="assets/images/faces/face1.jpg" class="me-2" alt="image"> El Moumen
-                            </td>
-                            <td> Ihssane </td>
-                            <td>
+                          <?php
+                            foreach ($admin as $a) {
+                              
+                              echo'
+                              <tr>
+                              <td>
+                              <img src="assets/img/UsersImages/'.$a['image_path'].'" class="me-2" alt="image"> '.$a['nom'].'
+                              </td>
+                              <td> '.$a['prenom'].' </td>
+                              <td>
                               <label class="badge badge-gradient-success">ADMIN</label>
-                            </td>
-                            <td> Ihssane@example.com </td>
-                            
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src="assets/images/faces/face2.jpg" class="me-2" alt="image"> Raoui
-                            </td>
-                            <td> Wafae </td>
-                            <td>
-                              <label class="badge badge-gradient-warning">ADMIN</label>
-                            </td>
-                            <td> Wafae@example.com</td>
-                            
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src="assets/images/faces/face3.jpg" class="me-2" alt="image"> Boulaajoul
-                            </td>
-                            <td> Abdlhamid</td>
-                            <td>
-                              <label class="badge badge-gradient-info">ADMIN</label>
-                            </td>
-                            <td> abdlhamid@example.com </td>
-                            
-                          </tr>
-                          
+                              </td>
+                              <td> '.$a['email'].' </td>
+                              
+                              </tr>';
+                            }
+                            ?>
                         </tbody>
                       </table>
                     </div>
