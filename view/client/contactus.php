@@ -1,3 +1,55 @@
+<?php
+require 'vendor/autoload.php'; 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Récupérer les données du formulaire
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $subject = $_POST["subject"];
+    $message = $_POST["message"];
+
+    // Adresse e-mail de destination
+    $to = "rentit.projet@gmail.com";
+
+    // En-têtes de l'e-mail
+    $headers = "From: $name <$email>" . "\r\n" .
+               "Reply-To: $email" . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
+
+    // Envoyer l'e-mail
+    $mail = new PHPMailer(true);
+    var_dump($mail);
+    try {
+        // Paramètres SMTP
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.example.com'; // Remplacez par le serveur SMTP de votre hébergeur
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'votre@email.com'; // Remplacez par votre adresse e-mail SMTP
+        $mail->Password   = 'votreMotDePasse'; // Remplacez par votre mot de passe SMTP
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Peut être PHPMailer::ENCRYPTION_SMTPS aussi
+        $mail->Port       = 587; // Utilisez le port SMTP correct (25, 587, etc.)
+
+        // Destinataire et contenu de l'e-mail
+        $mail->setFrom($email, $name);
+        $mail->addAddress($to);
+        $mail->isHTML(true);
+        $mail->Subject = $subject;
+        $mail->Body    = $message;
+
+        // Envoyer l'e-mail
+        $mail->send();
+
+        // Redirection si l'e-mail est envoyé avec succès
+        header("Location: index.php?page=contactUs");
+        exit;
+    } catch (Exception $e) {
+        // En cas d'erreur, affichage du message d'erreur
+        echo "Erreur lors de l'envoi de l'e-mail. Détails : {$mail->ErrorInfo}";
+    }
+
+}
+?>
+
 <main id="main">
 
     <!-- ======= Intro Single ======= -->
@@ -40,7 +92,7 @@
           <div class="col-sm-12 section-t8">
             <div class="row">
               <div class="col-md-7">
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) .'?page=contactUs'?>" method="post" role="form" class="php-email-form">
                   <div class="row">
                     <div class="col-md-6 mb-3">
                       <div class="form-group">
