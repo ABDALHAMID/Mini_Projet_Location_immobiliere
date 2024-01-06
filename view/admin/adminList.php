@@ -1,3 +1,7 @@
+<?php
+$admin=getAdmins();
+
+?>
 <div class="row">
               <div class="col-12 grid-margin">
                 <div class="card">
@@ -7,58 +11,31 @@
                       <table class="table">
                         <thead>
                           <tr>
-                            <th> Admin </th>
-                            <th> Subjec </th>
+                            <th> Nom </th>
+                            <th> Prénom</th>
                             <th> Status </th>
-                            <th> Last Update </th>
-                            <th> Tracking ID </th>
+                            <th> Email </th>
+                            
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td>
-                              <img src="assets/images/faces/face1.jpg" class="me-2" alt="image"> David Grey
-                            </td>
-                            <td> Fund is not recieved </td>
-                            <td>
-                              <label class="badge badge-gradient-success">DONE</label>
-                            </td>
-                            <td> Dec 5, 2017 </td>
-                            <td> WD-12345 </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src="assets/images/faces/face2.jpg" class="me-2" alt="image"> Stella Johnson
-                            </td>
-                            <td> High loading time </td>
-                            <td>
-                              <label class="badge badge-gradient-warning">PROGRESS</label>
-                            </td>
-                            <td> Dec 12, 2017 </td>
-                            <td> WD-12346 </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src="assets/images/faces/face3.jpg" class="me-2" alt="image"> Marina Michel
-                            </td>
-                            <td> Website down for one week </td>
-                            <td>
-                              <label class="badge badge-gradient-info">ON HOLD</label>
-                            </td>
-                            <td> Dec 16, 2017 </td>
-                            <td> WD-12347 </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img src="assets/images/faces/face4.jpg" class="me-2" alt="image"> John Doe
-                            </td>
-                            <td> Loosing control on server </td>
-                            <td>
-                              <label class="badge badge-gradient-danger">REJECTED</label>
-                            </td>
-                            <td> Dec 3, 2017 </td>
-                            <td> WD-12348 </td>
-                          </tr>
+                          <?php
+                            foreach ($admin as $a) {
+                              
+                              echo'
+                              <tr>
+                              <td>
+                              <img src="assets/img/UsersImages/'.$a['image_path'].'" class="me-2" alt="image"> '.$a['nom'].'
+                              </td>
+                              <td> '.$a['prenom'].' </td>
+                              <td>
+                              <label class="badge badge-gradient-success">ADMIN</label>
+                              </td>
+                              <td> '.$a['email'].' </td>
+                              
+                              </tr>';
+                            }
+                            ?>
                         </tbody>
                       </table>
                     </div>
