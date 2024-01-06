@@ -83,6 +83,13 @@ require_once('models/userModel.php');
         return $user;
 
     }
+    function getUserById($userId){
+        $userModel = new UserModel();
+        $user = $userModel->getUserById($userId);
+
+        return $user;
+
+    }
     function numberofadmins(){
         $userModel = new UserModel();
         $user = $userModel->getUsers();

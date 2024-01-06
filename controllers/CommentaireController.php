@@ -2,17 +2,14 @@
 
 require_once('models/CommentaireModel.php');
 
-// function getAllCommentairesController()
-// {
-//     $commentaireModel = new CommentaireModel();
-//     $commentaires = $commentaireModel->getAllCommentaires();
-
-//     // Vous pouvez traiter les commentaires ici, par exemple les afficher dans une vue.
+function getAllCommentairesController()
+{
+    $commentaireModel = new CommentaireModel();
+    $commentaires = $commentaireModel->getAllCommentaires();
     
-//     return $commentaires;
-// }
-// Assuming $conn is your database connection object
-// $commentaireModel = new CommentaireModel($conn);
+    return $commentaires;
+}
+
 
 function addCommentaireController($commentaire)
 {
