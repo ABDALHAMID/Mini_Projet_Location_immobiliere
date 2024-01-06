@@ -41,7 +41,7 @@ if (isset($_SESSION["id"]) && isset($_SESSION["type"])) {
          </div>';
    echo '<div>
       <a href="' . htmlspecialchars($_SERVER['PHP_SELF']) . '?page=login' . '" class="login-button">
-         <span><i class="bi bi-box-arrow-in-right"></i> LogIn</span>
+         <span><i class="bi bi-box-arrow-in-right"></i> Login</span>
       </a>
       </div>';
    echo '</div>';
