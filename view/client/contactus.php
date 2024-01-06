@@ -87,7 +87,7 @@
                     </div>
                     <div class="icon-box-content">
                       <p class="mb-1">Email.
-                        <span class="color-a">Raintit@gmail.com</span>
+                        <span class="color-a">rentit.projet@gmail.com</span>
                       </p>
                       <p class="mb-1">Phone.
                         <span class="color-a">+212 500000000</span>
