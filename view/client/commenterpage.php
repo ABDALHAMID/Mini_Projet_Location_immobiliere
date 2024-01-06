@@ -14,7 +14,8 @@
 
             </div>
             <div class="commenter">
-                <input type="text" name="Commentaire" required="" placeholder="Commentaire">
+                <input type="text" class="input" name="Commentaire" required="" placeholder="commentaire">
+</input>
                 
             </div>
             <button type='Submit' >
