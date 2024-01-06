@@ -122,7 +122,7 @@
  {
    transform: translateY(-7.5px);
    font-size: 0.8em;
-   color: #222;
+   color: #0005;
  }
  .signin .content .form .links 
  {
@@ -1065,6 +1065,10 @@
     transform: translateY(-50px) scale(0) rotate(120deg);
   }
 
+  .my-carousel-style{
+    width: 90vw;
+    background-color: red;
+  }
   .addbutton {
     border: 2px solid green;
     background-color: green;

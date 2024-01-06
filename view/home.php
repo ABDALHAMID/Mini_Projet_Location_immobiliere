@@ -8,6 +8,10 @@ require_once('controllers/logementController.php');
 
 require_once('controllers/locationOrderController.php');
 
+require_once('controllers/logementAmenitiesController.php');
+
+require_once('controllers/logementImagesController.php');
+
 require_once('controllers/CommentaireController.php');
 
 if (isset($_GET['page'])) {
