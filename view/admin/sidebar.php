@@ -24,7 +24,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="menu-title">users listos</span>
+                <span class="menu-title">Liste d'utilisateurs</span>
                 <i class="menu-arrow"></i>
                 <i class="mdi mdi-account-circle"></i>
               </a>
@@ -37,14 +37,14 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) . '?page=listLogement'?>">
-                <span class="menu-title">logementsos</span>
+                <span class="menu-title">logements</span>
                 <i class="mdi mdi-contacts menu-icon"></i>
               </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) . '?page=statistique'?>">
-                <span class="menu-title">statistiqueso</span>
+                <span class="menu-title">statistique</span>
                 <i class="mdi mdi-chart-bar menu-icon"></i>
               </a>
             </li>

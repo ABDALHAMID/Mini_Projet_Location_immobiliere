@@ -38,7 +38,7 @@
                 <div class="card-box-ico-style">
                   <span class="bi bi-calendar4-week"></span>
                 </div>
-                <div class="card-inner"><span>Prets</span>
+                <div class="card-inner"><span>Louer</span>
               </div>
               </div>
             </div>

@@ -27,12 +27,12 @@
 
 if (isset($_GET['rentnow'])) {
     $rentStatus = createPendingOrder();
-    echo '<script> showAlert(\'you rent this property successefuly\',\'?page=all_properties\', \'click here to see what you have\', \'alert-success\') </script>';
+    echo '<script> showAlert(\'vous  avez louez cette propriété avec succès\',\'?page=all_properties\', \'click ici pour voir\', \'alert-success\') </script>';
 }
 
 if (isset($_GET['derent'])) {
     $rentStatus = createPendingOrder();
-    echo '<script> showAlert(\'you rent this property successefuly\',\'?page=all_properties\', \'click here to see what you have\', \'alert-success\') </script>';
+    echo '<script> showAlert(\'vous avez louez cette propriété avec succès\',\'?page=all_properties\', \'click ici pour voir\', \'alert-success\') </script>';
 }
 
 
@@ -56,7 +56,7 @@ if (isset($_SESSION["id"])) {
                     </div>';
         }
         else{
-            echo '<button class="notAllowedButton" onClick="showAlert(\'vous deja envoiyer une demande, si vous vouler anuler la demande\', \'' . $_SERVER['PHP_SELF'] . '?page=logement&id=' . $logement['id'] . '&derent\', \'click ici\', \'alert-info\')">
+            echo '<button class="notAllowedButton" onClick="showAlert(\'vous avez deja envoyer une demande, si vous vouler annuler la demande\', \'' . $_SERVER['PHP_SELF'] . '?page=logement&id=' . $logement['id'] . '&derent\', \'click ici\', \'alert-info\')">
                    <span>attent</span>
                <span>
                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-miterlimit="2" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd"><path fill-rule="nonzero" d="m12.002 2.005c5.518 0 9.998 4.48 9.998 9.997 0 5.518-4.48 9.998-9.998 9.998-5.517 0-9.997-4.48-9.997-9.998 0-5.517 4.48-9.997 9.997-9.997zm0 1.5c-4.69 0-8.497 3.807-8.497 8.497s3.807 8.498 8.497 8.498 8.498-3.808 8.498-8.498-3.808-8.497-8.498-8.497zm0 7.425 2.717-2.718c.146-.146.339-.219.531-.219.404 0 .75.325.75.75 0 .193-.073.384-.219.531l-2.717 2.717 2.727 2.728c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.384-.073-.53-.219l-2.729-2.728-2.728 2.728c-.146.146-.338.219-.53.219-.401 0-.751-.323-.751-.75 0-.192.073-.384.22-.531l2.728-2.728-2.722-2.722c-.146-.147-.219-.338-.219-.531 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"></path></svg>
@@ -64,8 +64,8 @@ if (isset($_SESSION["id"])) {
            </button>';
         }
     } else if ($isItRented['status'] == 'rented') {
-        echo '<button class="notAllowedButton" onClick="showAlert(\'ce logement est deja loué\',\'?page=all_properties\', \'vour tout les logements\', \'alert-danger\')">
-                   <span>rented</span>
+        echo '<button class="notAllowedButton" onClick="showAlert(\'ce logement est deja loué pour revenir \',\'?page=all_properties\', \'click ici\', \'alert-danger\')">
+                   <span>déja loué</span>
                <span>
                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-miterlimit="2" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd"><path fill-rule="nonzero" d="m12.002 2.005c5.518 0 9.998 4.48 9.998 9.997 0 5.518-4.48 9.998-9.998 9.998-5.517 0-9.997-4.48-9.997-9.998 0-5.517 4.48-9.997 9.997-9.997zm0 1.5c-4.69 0-8.497 3.807-8.497 8.497s3.807 8.498 8.497 8.498 8.498-3.808 8.498-8.498-3.808-8.497-8.498-8.497zm0 7.425 2.717-2.718c.146-.146.339-.219.531-.219.404 0 .75.325.75.75 0 .193-.073.384-.219.531l-2.717 2.717 2.727 2.728c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.384-.073-.53-.219l-2.729-2.728-2.728 2.728c-.146.146-.338.219-.53.219-.401 0-.751-.323-.751-.75 0-.192.073-.384.22-.531l2.728-2.728-2.722-2.722c-.146-.147-.219-.338-.219-.531 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"></path></svg>
                </span>
@@ -81,7 +81,7 @@ if (isset($_SESSION["id"])) {
 
 
 } else {
-    echo '<button class="notAllowedButton" onClick="showAlert(\'you need to login first to rent this:\', \'?page=login\', \'click to login\', \'alert-danger\')">
+    echo '<button class="notAllowedButton" onClick="showAlert(\'vous devez d\'abord vous connecter pour louer ceci:\', \'?page=login\', \'click ici pour se connecter\', \'alert-danger\')">
                     <span>Not allowed!</span>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-miterlimit="2" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd"><path fill-rule="nonzero" d="m12.002 2.005c5.518 0 9.998 4.48 9.998 9.997 0 5.518-4.48 9.998-9.998 9.998-5.517 0-9.997-4.48-9.997-9.998 0-5.517 4.48-9.997 9.997-9.997zm0 1.5c-4.69 0-8.497 3.807-8.497 8.497s3.807 8.498 8.497 8.498 8.498-3.808 8.498-8.498-3.808-8.497-8.498-8.497zm0 7.425 2.717-2.718c.146-.146.339-.219.531-.219.404 0 .75.325.75.75 0 .193-.073.384-.219.531l-2.717 2.717 2.727 2.728c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.384-.073-.53-.219l-2.729-2.728-2.728 2.728c-.146.146-.338.219-.53.219-.401 0-.751-.323-.751-.75 0-.192.073-.384.22-.531l2.728-2.728-2.722-2.722c-.146-.147-.219-.338-.219-.531 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"></path></svg>

@@ -54,7 +54,7 @@ $LImages = getLImages();
               <div class="property-price d-flex justify-content-center foo">
                 <div class="card-header-c d-flex">
                   <div class="card-box-ico">
-                    <span class="bi bi-cash">$</span>
+                    <span class="bi bi-cash">MAD</span>
                   </div>
                   <div class="card-title-c align-self-center">
                     <h5 class="title-c">

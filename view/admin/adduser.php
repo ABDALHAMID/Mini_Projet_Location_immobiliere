@@ -55,7 +55,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <span>Save</span>
                     </button>
                   </div>
-                  <div class="text-center mt-4 font-weight-light"> Already have an account? <a href="login.html" class="text-primary">Login</a>
+                  <div class="text-center mt-4 font-weight-light"> Vous avez déja un compte? <a href="login.html" class="text-primary">Login</a>
                   </div>
                 </form>
               </div>

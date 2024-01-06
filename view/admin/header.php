@@ -39,10 +39,10 @@
         </a>
         <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
           <a class="dropdown-item" href="#account">
-            <i class="mdi mdi-cached me-2 text-success"></i> account </a>
+            <i class="mdi mdi-cached me-2 text-success"></i> compte </a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) . '?page=logout' ?>">
-            <i class="mdi mdi-logout me-2 text-primary"></i> Signout </a>
+            <i class="mdi mdi-logout me-2 text-primary"></i> Sign out </a>
         </div>
       </li>
       <li class="nav-item d-none d-lg-block full-screen-link">
@@ -64,7 +64,7 @@
               <img src="assets/images/faces/face4.jpg" alt="image" class="profile-pic">
             </div>
             <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-              <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Mark send you a message</h6>
+              <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Ihssane a envoyer un message</h6>
               <p class="text-gray mb-0"> 1 Minutes ago </p>
             </div>
           </a>
@@ -74,7 +74,7 @@
               <img src="assets/images/faces/face2.jpg" alt="image" class="profile-pic">
             </div>
             <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-              <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Cregh send you a message</h6>
+              <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Wafae a envoyer un message</h6>
               <p class="text-gray mb-0"> 15 Minutes ago </p>
             </div>
           </a>
@@ -89,7 +89,7 @@
             </div>
           </a>
           <div class="dropdown-divider"></div>
-          <h6 class="p-3 mb-0 text-center">4 new messages</h6>
+          <h6 class="p-3 mb-0 text-center">4 nouveaux messages</h6>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -109,8 +109,8 @@
               </div>
             </div>
             <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-              <h6 class="preview-subject font-weight-normal mb-1">Event today</h6>
-              <p class="text-gray ellipsis mb-0"> Just a reminder that you have an event today </p>
+              <h6 class="preview-subject font-weight-normal mb-1">Evenement d'aujourd'hui</h6>
+              <p class="text-gray ellipsis mb-0"> Just pour vous rappler d'evenement  </p>
             </div>
           </a>
           <div class="dropdown-divider"></div>
@@ -121,8 +121,8 @@
               </div>
             </div>
             <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-              <h6 class="preview-subject font-weight-normal mb-1">Settings</h6>
-              <p class="text-gray ellipsis mb-0"> Update dashboard </p>
+              <h6 class="preview-subject font-weight-normal mb-1">Parametres</h6>
+              <p class="text-gray ellipsis mb-0"> Actualiser </p>
             </div>
           </a>
           <div class="dropdown-divider"></div>
@@ -134,11 +134,11 @@
             </div>
             <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
               <h6 class="preview-subject font-weight-normal mb-1">Launch Admin</h6>
-              <p class="text-gray ellipsis mb-0"> New admin wow! </p>
+              <p class="text-gray ellipsis mb-0"> Nouveau admin </p>
             </div>
           </a>
           <div class="dropdown-divider"></div>
-          <h6 class="p-3 mb-0 text-center">See all notifications</h6>
+          <h6 class="p-3 mb-0 text-center">Voir tous les  notifications</h6>
         </div>
       </li>
       <li class="nav-item nav-logout d-none d-lg-block">

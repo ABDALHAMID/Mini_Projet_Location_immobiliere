@@ -17,6 +17,17 @@
     $data = $logementModel->getLogementById($id);
     return $data;
   }
+  function numberoflogment(){
+    $logementModel = new LogementModel();
+    $data = $logementModel->getAllLogements();
+    $number = 0;
+        foreach ($data as $row) {
+            $number++;
+        }
+        return $number;
+
+
+  }
 
 
 
