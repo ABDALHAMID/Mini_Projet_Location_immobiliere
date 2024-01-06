@@ -21,10 +21,12 @@ if (isset($_GET['page'])) {
         break; 
         case 'logement':
             include('logement.php');
-        break;   
+        break;
+        case 'logout':
+        break;  
         
         default:
-            # code...
+            header('location:?404');
             break;
     }
 }
