@@ -73,3 +73,7 @@
 
       </div>
     </section><!-- End Testimonials Section -->
+      <?php 
+      include('addCommentaireButton.php');
+      
+      ?>

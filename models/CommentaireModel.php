@@ -29,9 +29,9 @@ class CommentaireModel
         return $commentaires;
     }
 
-    public function addCommentaire($commentaire)
+    public function addCommentaire($userId, $commentaire)
     {
-        $query = "INSERT INTO commentaires (`Commentaire`, `DateCommentaire`) VALUES (?, current_timestamp())";
+        $query = "INSERT INTO commentaires ('id' , `Commentaire`, `DateCommentaire`) VALUES ($userId, $commentaire, current_timestamp())";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param("s", $commentaire);
 
