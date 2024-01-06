@@ -2,13 +2,13 @@
               <div class="col-12 grid-margin">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Recent Tickets</h4>
+                    <h4 class="card-title">Liste administrateur</h4>
                     <div class="table-responsive">
                       <table class="table">
                         <thead>
                           <tr>
-                            <th> Assignee </th>
-                            <th> Subject </th>
+                            <th> Admin </th>
+                            <th> Subjec </th>
                             <th> Status </th>
                             <th> Last Update </th>
                             <th> Tracking ID </th>
