@@ -36,15 +36,20 @@ class LogementModel {
         return $logements;
       }  
 
-    public function addLogement($adresse, $type_logement, $nombre_chambres, $prix, $image_path) {
-        $query = "INSERT INTO logement (adresse, type_logement, nombre_chambres, prix, image_path) VALUES ($adresse, $type_logement, $nombre_chambres, $prix, $image_path)";
-        $stmt = $this->db->prepare($query);
+    public function addLogement($name, $adresse, $type_logement, $nombre_chambres, $prix, $image_path, $description, $status, $area, $beds, $baths, $garage, $city) {
+        $query = "INSERT INTO logement(id, name, adresse, type_logement, nombre_chambres, prix, image_path, description, status, area, beds, baths, garage, city) VALUES (NULL,'$name', '$adresse', '$type_logement', '$nombre_chambres', '$prix', '$image_path', '$description', '$status', '$area', '$beds', '$baths', $garage, '$city')";
         $result = $this->db->query($query);
         return $result;
     }
 
     public function getLogementById($logementId) {
         $query = "SELECT * FROM logement WHERE id = '$logementId'";
+        $result = $this->db->query($query)->fetch_assoc();
+        return $result;
+    }
+
+    public function getLastone(){
+        $query = "SELECT * FROM logement ORDER BY id DESC LIMIT 1;";
         $result = $this->db->query($query)->fetch_assoc();
         return $result;
     }

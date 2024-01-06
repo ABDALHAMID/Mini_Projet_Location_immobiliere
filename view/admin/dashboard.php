@@ -24,6 +24,9 @@
                   case 'clientList':
                     include('clientList.php');
                     break;  
+                    case 'listLogement':
+                      include('logementList.php');
+                      break; 
           default:
             include('mainPanel.php');
               break;
