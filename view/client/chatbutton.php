@@ -1,4 +1,21 @@
-<button class="cssbuttons-io-button">
+<script>
+function showDialogue() {
+        let Message = document.getElementById("dialogue");
+        Message.classList.remove("d-none");
+        let b = document.getElementById("dialoguef");
+        b.classList.remove("d-none");
+
+    }
+
+    function closeDialogue() {
+        let Message = document.getElementById("dialogue");
+        Message.classList.add("d-none");
+        let b = document.getElementById("dialoguef");
+        b.classList.add("d-none");
+
+    }
+    </script>
+<button class="cssbuttons-io-button" onclick="showDialogue()">
   Rent It Chat
   <div class="icon">
     <svg
@@ -15,3 +32,15 @@
     </svg>
   </div>
 </button>
+<div id="dialoguef" class="d-none">
+    <h2>Chat Dialogue</h2>
+    <!-- Ajoutez ici le contenu de votre dialogue -->
+    <button onclick="closeDialogue()">Fermer</button>
+</div>
+
+
+<?php
+include('Chat.php');
+?>
+
+
