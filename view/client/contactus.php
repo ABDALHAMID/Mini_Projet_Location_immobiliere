@@ -46,17 +46,17 @@
                   <div class="row">
                     <div class="col-md-6 mb-3">
                       <div class="form-group">
-                        <input type="text" name="name" class="form-control form-control-lg form-control-a" placeholder="Your Name" required>
+                        <input type="text" name="name" class="form-control form-control-lg form-control-a" placeholder="Votre Nom" required>
                       </div>
                     </div>
                     <div class="col-md-6 mb-3">
                       <div class="form-group">
-                        <input name="email" type="email" class="form-control form-control-lg form-control-a" placeholder="Your Email" required>
+                        <input name="email" type="email" class="form-control form-control-lg form-control-a" placeholder="Votre Email" required>
                       </div>
                     </div>
                     <div class="col-md-12 mb-3">
                       <div class="form-group">
-                        <input type="text" name="subject" class="form-control form-control-lg form-control-a" placeholder="Subject" required>
+                        <input type="text" name="subject" class="form-control form-control-lg form-control-a" placeholder="Object" required>
                       </div>
                     </div>
                     <div class="col-md-12">
@@ -73,9 +73,7 @@
                     </div>
 
                     <div class="col-md-12 text-center">
-                    <?php if ($responses): ?>
-<p class="responses"><?php echo implode('<br>', $responses); ?></p>
-<?php endif; ?>
+                   
                       <button type="submit" class="btn btn-a">Envoyer</button>
                     </div>
                   </div>
