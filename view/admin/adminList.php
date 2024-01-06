@@ -7,58 +7,48 @@
                       <table class="table">
                         <thead>
                           <tr>
-                            <th> Admin </th>
-                            <th> Subjec </th>
+                            <th> Nom </th>
+                            <th> Prénom</th>
                             <th> Status </th>
-                            <th> Last Update </th>
-                            <th> Tracking ID </th>
+                            <th> Email </th>
+                            
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <td>
-                              <img src="assets/images/faces/face1.jpg" class="me-2" alt="image"> David Grey
+                              <img src="assets/images/faces/face1.jpg" class="me-2" alt="image"> El Moumen
                             </td>
-                            <td> Fund is not recieved </td>
+                            <td> Ihssane </td>
                             <td>
-                              <label class="badge badge-gradient-success">DONE</label>
+                              <label class="badge badge-gradient-success">ADMIN</label>
                             </td>
-                            <td> Dec 5, 2017 </td>
-                            <td> WD-12345 </td>
+                            <td> Ihssane@example.com </td>
+                            
                           </tr>
                           <tr>
                             <td>
-                              <img src="assets/images/faces/face2.jpg" class="me-2" alt="image"> Stella Johnson
+                              <img src="assets/images/faces/face2.jpg" class="me-2" alt="image"> Raoui
                             </td>
-                            <td> High loading time </td>
+                            <td> Wafae </td>
                             <td>
-                              <label class="badge badge-gradient-warning">PROGRESS</label>
+                              <label class="badge badge-gradient-warning">ADMIN</label>
                             </td>
-                            <td> Dec 12, 2017 </td>
-                            <td> WD-12346 </td>
+                            <td> Wafae@example.com</td>
+                            
                           </tr>
                           <tr>
                             <td>
-                              <img src="assets/images/faces/face3.jpg" class="me-2" alt="image"> Marina Michel
+                              <img src="assets/images/faces/face3.jpg" class="me-2" alt="image"> Boulaajoul
                             </td>
-                            <td> Website down for one week </td>
+                            <td> Abdlhamid</td>
                             <td>
-                              <label class="badge badge-gradient-info">ON HOLD</label>
+                              <label class="badge badge-gradient-info">ADMIN</label>
                             </td>
-                            <td> Dec 16, 2017 </td>
-                            <td> WD-12347 </td>
+                            <td> abdlhamid@example.com </td>
+                            
                           </tr>
-                          <tr>
-                            <td>
-                              <img src="assets/images/faces/face4.jpg" class="me-2" alt="image"> John Doe
-                            </td>
-                            <td> Loosing control on server </td>
-                            <td>
-                              <label class="badge badge-gradient-danger">REJECTED</label>
-                            </td>
-                            <td> Dec 3, 2017 </td>
-                            <td> WD-12348 </td>
-                          </tr>
+                          
                         </tbody>
                       </table>
                     </div>
