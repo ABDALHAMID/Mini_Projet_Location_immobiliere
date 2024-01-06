@@ -83,7 +83,26 @@ require_once('models/userModel.php');
         return $user;
 
     }
-    
+    function numberofadmins(){
+        $userModel = new UserModel();
+        $user = $userModel->getUsers();
+        $number = 0;
+        foreach ($user as $row) {
+            if ($row['type']=='administrator')
+            $number++;
+        }
+        return $number;
+    }
+    function numberofclients(){
+        $userModel = new UserModel();
+        $user = $userModel->getUsers();
+        $number = 0;
+        foreach ($user as $row) {
+            if ($row['type']=='client')
+            $number++;
+        }
+        return $number;
+    }
     function dropUser($userId){
         
     }

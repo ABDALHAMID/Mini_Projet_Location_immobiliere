@@ -10,7 +10,7 @@
         <h4 class="font-weight-normal mb-3">
           nombre de logements <i class="mdi mdi-home-group mdi-24px float-right"></i>
         </h4> 
-        <h2 class="mb-5">nombre ici avec php</h2>
+        <h2 class="mb-5"><?php  echo numberoflogment()?></h2>
       </div>  
     </div>
   </div>
@@ -26,7 +26,7 @@
           nombre de client
           <i class="bi bi-people-fill float-right"></i>
         </h4>
-        <h2 class="mb-5">nombre ici avec php</h2>
+        <h2 class="mb-5"><?php echo numberofclients() ?></h2>
 
       </div>
     </div>
@@ -42,7 +42,7 @@
         <h4 class="font-weight-normal mb-3">
           nombre d'administrateur <i class="bi bi-person-fill-gear float-right"></i>
         </h4>
-        <h2 class="mb-5">nombre ici avec php  </h2>
+        <h2 class="mb-5"><?php echo numberofadmins()?>  </h2>
       </div>
     </div>
   </div>
