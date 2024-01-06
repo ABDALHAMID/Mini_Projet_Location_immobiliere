@@ -1,4 +1,10 @@
 
+<?php 
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $commentaire = $_POST["Commentaire"];
+        addCommentaireController($commentaire);
+    }
+?>
 <div id="commentForm" class="d-none commenterpage" >
         <div class="overlay"></div>
         
@@ -8,7 +14,7 @@
 
             </div>
             <div class="commenter">
-                <input type="text" name="" required="" placeholder="Commentaire">
+                <input type="text" name="Commentaire" required="" placeholder="Commentaire">
                 
             </div>
             <button type='Submit' >
