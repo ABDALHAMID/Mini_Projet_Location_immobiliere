@@ -11,7 +11,20 @@
     if($status ){
         return array("status" => true);
     }
-    else{ return array("status" => true); 
+    else{ return array("status" => false); 
+    }
+
+  }
+  function stopOrder(){
+    $lOrderModel = new LocationOrderModel();
+    $user_id = getUser()["id"];
+    $logement_id = getLogement($_GET['id'])['id'];
+    $status = $lOrderModel->UpdateLocationOrderStatus($user_id, $logement_id, 'rejected');
+    if($status){
+      return array('status'=> true);
+    }
+    else{
+      return array('status'=> false);
     }
 
   }

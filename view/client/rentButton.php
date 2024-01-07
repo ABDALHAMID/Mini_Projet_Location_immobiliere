@@ -31,8 +31,11 @@ if (isset($_GET['rentnow'])) {
 }
 
 if (isset($_GET['derent'])) {
-    $rentStatus = createPendingOrder();
-    echo '<script> showAlert(\'vous avez louez cette propriété avec succès\',\'?page=all_properties\', \'click ici pour voir\', \'alert-success\') </script>';
+    $rentStatus = stopOrder();
+
+    echo' <script>
+    window.location.replace("index.php?page=logement&id='.$_GET['id'].'");
+</script>';
 }
 
 

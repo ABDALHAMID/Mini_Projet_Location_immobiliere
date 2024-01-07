@@ -20,7 +20,7 @@ class LocationOrderModel {
     }
 
     public function UpdateLocationOrderStatus($user_id, $logement_id, $status) {
-        $query = "INSERT INTO location_order(id, user_id,logement_id, date_order, status) VALUES (NULL, '$user_id','$logement_id', NOW(),'$status')";
+        $query = "UPDATE `location_order` SET status='$status' WHERE user_id='$user_id' AND logement_id='$logement_id'";
         $result = $this->db->query($query);
         if(!$result) {die($this->db->error);
         }
