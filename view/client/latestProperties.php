@@ -26,9 +26,9 @@
             foreach ($logements as $logement) {
                 # code...
                 echo'
-                <div class="carousel-item-b swiper-slide">
+                <div class="carousel-item-b swiper-slide ">
                   <div class="card-box-a card-shadow">
-                    <div class="img-box-a">
+                    <div class="img-box-a logement-item-img">
                       <img src="assets/img/LogementImages/'.$logement['image_path'].'" alt="'.$logement['name'].', '.$logement['adresse'].', '.$logement['city'].'" class="img-a img-fluid">
                     </div>
                       <div class="card-overlay">

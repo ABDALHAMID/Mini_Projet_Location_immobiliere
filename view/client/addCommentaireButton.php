@@ -5,10 +5,10 @@
         alertMessage.classList.remove("d-none");
         alertMessage.classList.add(type);
 
-        // Automatically close the alert after 5000 milliseconds (5 seconds)
+        
         setTimeout(function () {
             closeAlert();
-        }, 5000);
+        }, 7000);
     }
 
     function closeAlert() {
