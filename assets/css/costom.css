@@ -1299,6 +1299,8 @@
   .chat-header {
     background-color: green;
     color: white;
+    display: flex;
+    justify-content: space-between;
     padding: 10px;
     font-size: 18px;
     border-top-left-radius: 5px;
@@ -1353,4 +1355,42 @@
     width: 100%;
     height: auto;
     object-fit: fill;
+  }
+  .cat-close-button {
+    position: relative;
+    border: none;
+    background: none;
+  }
+  
+  .close-div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -40%;
+    left: 70%;
+    font-size: 16px;
+    background-color: rgb(254, 255, 225);
+    color: #000;
+    border: 1px solid #000;
+    pointer-events: none;
+    opacity: 0;
+  }
+  
+  .cat-close-button:hover {
+    background-color: rgb(210, 0, 0);
+  }
+  
+  .cat-close-button:active {
+    background-color: rgb(130, 0, 0);
+  }
+  
+  .cat-close-button:hover > .close-div {
+    animation: close 0.2s forwards 1.25s;
+  }
+  
+  @keyframes close {
+    100% {
+      opacity: 1;
+    }
   }
