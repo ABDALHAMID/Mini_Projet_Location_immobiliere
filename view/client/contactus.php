@@ -1,62 +1,4 @@
-<?php
-require './assets/vendor/PHPMailer-master/src/Exception.php';
-require './assets/vendor/PHPMailer-master/src/PHPMailer.php';
-require './assets/vendor/PHPMailer-master/src/SMTP.php';
-
- 
- use PHPMailer\PHPMailer\PHPMailer;
- use PHPMailer\PHPMailer\Exception;
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Récupérer les données du formulaire
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $subject = $_POST["subject"];
-    $message = $_POST["message"];
-
-    // Adresse e-mail de destination
-    $to = "rentit.projet@gmail.com";
-
-    // En-têtes de l'e-mail
-    $headers = "From: $name <$email>" . "\r\n" .
-               "Reply-To: $email" . "\r\n" .
-               "X-Mailer: PHP/" . phpversion();
-
-    // Envoyer l'e-mail
-    $mail = new PHPMailer(true);
-
-    try {
-        // Paramètres SMTP
-        $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com'; // Remplacez par le serveur SMTP de votre hébergeur
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'rentit.projet@gmail.com'; // Remplacez par votre adresse e-mail SMTP
-        $mail->Password   = 'rentit123'; // Remplacez par votre mot de passe SMTP
-        $mail->SMTPSecure = 'tls'; // Peut être PHPMailer::ENCRYPTION_SMTPS aussi
-        $mail->Port       = 587; // Utilisez le port SMTP correct (25, 587, etc.)
-
-        // Destinataire et contenu de l'e-mail
-        $mail->setFrom($email, $name);
-        $mail->addAddress($to);
-        $mail->isHTML(true);
-        $mail->Subject = $subject;
-        $mail->Body    = $message;
-
-        // Envoyer l'e-mail
-        $mail->send();
-        echo 'Le message a été envoyé avec succès.';
-        
-
-        // Redirection si l'e-mail est envoyé avec succès
-        header("Location: index.php?page=contactUs");
-        exit;
-    } catch (Exception $e) {
-        // En cas d'erreur, affichage du message d'erreur
-        echo "Erreur lors de l'envoi de l'e-mail. Détails : {$mail->ErrorInfo}";
-    }
-
-}
-?>
+<
 
 <main id="main">
 
@@ -104,17 +46,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   <div class="row">
                     <div class="col-md-6 mb-3">
                       <div class="form-group">
-                        <input type="text" name="name" class="form-control form-control-lg form-control-a" placeholder="Your Name" required>
+                        <input type="text" name="name" class="form-control form-control-lg form-control-a" placeholder="Votre Nom" required>
                       </div>
                     </div>
                     <div class="col-md-6 mb-3">
                       <div class="form-group">
-                        <input name="email" type="email" class="form-control form-control-lg form-control-a" placeholder="Your Email" required>
+                        <input name="email" type="email" class="form-control form-control-lg form-control-a" placeholder="Votre Email" required>
                       </div>
                     </div>
                     <div class="col-md-12 mb-3">
                       <div class="form-group">
-                        <input type="text" name="subject" class="form-control form-control-lg form-control-a" placeholder="Subject" required>
+                        <input type="text" name="subject" class="form-control form-control-lg form-control-a" placeholder="Object" required>
                       </div>
                     </div>
                     <div class="col-md-12">
@@ -131,6 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
 
                     <div class="col-md-12 text-center">
+                   
                       <button type="submit" class="btn btn-a">Envoyer</button>
                     </div>
                   </div>
