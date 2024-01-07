@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['message'])) {
         'prix' => 'les prix entre 200mad et 1000mad',
         'type' => 'Vous pouvez trouver des appartements , des villas , des maison , des salles , portes ouvertes ',
         'logement disponibles' =>'il se trouve plusieurs logements disponible pour plus d\'information visiter la page concernée',
-        'Qu\'elle le role de l\'application'=>'Fournir des services de location en prenant en considération vos désirs et votre mode de vie. Pour plus d\'infos visitez nos services',
+        'role'=>'Fournir des services de location en prenant en considération vos désirs et votre mode de vie. Pour plus d\'infos visitez nos services',
         // Add more keywords as needed
     );
 
