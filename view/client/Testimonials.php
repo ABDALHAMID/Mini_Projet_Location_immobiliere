@@ -3,7 +3,7 @@
 
     ?>
     <!-- ======= Testimonials Section ======= -->
-    <section class="section-testimonials section-t8 nav-arrow-a">
+    <section class="section-testimonials section-t8 nav-arrow-a" >
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -15,7 +15,7 @@
           </div>
         </div>
 
-        <div id="testimonial-carousel" class="swiper">
+        <div id="testimonial-carousel" class="swiper comanter-my-style">
           <div class="swiper-wrapper">
             <?php
             foreach ($commentaire as $row) {
