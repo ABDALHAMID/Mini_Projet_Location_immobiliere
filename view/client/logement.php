@@ -34,6 +34,7 @@ $LImages = getLImages();
                 <?php echo $logement['name'] ?>
               </li>
             </ol>
+
           </nav>
         </div>
       </div>
