@@ -1,6 +1,12 @@
 <?php
 session_start();
 require('database_connection.php');
+
+
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,11 +31,17 @@ require('database_connection.php');
   <!-- Template Main CSS File -->
   <link rel="stylesheet" href="assets/css/costom.css">
   <link href="assets/css/style.css" rel="stylesheet">
+ 
+  
 </head>
 
 <body>
 
+
+
+
   <?php
+
 
 $requestUri = $_SERVER['REQUEST_URI'];
 

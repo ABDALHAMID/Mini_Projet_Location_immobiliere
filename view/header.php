@@ -47,6 +47,7 @@
           <a class="nav-link " href="<?php echo $_SERVER['PHP_SELF'] . "?page=contactUs" ?>">Contact</a>
         </li>
       </ul>
+     
 
     </div>
     <?php

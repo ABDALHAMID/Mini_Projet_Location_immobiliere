@@ -46,6 +46,7 @@ if (isset($_SESSION["id"]) && isset($_SESSION["type"])) {
       </div>';
    echo '</div>';
 }
+include 'theme_switch.php';
 
 
 
@@ -53,3 +54,4 @@ if (isset($_SESSION["id"]) && isset($_SESSION["type"])) {
 
 
 ?>
+ 
