@@ -1066,8 +1066,30 @@
   }
 
   .my-carousel-style{
-    width: 90vw;
-    background-color: red;
+    height: 70vh;
+  }
+  .my-carousel-style .backImag{
+    width: 100%;
+    height: 100%;
+    z-index: -152;
+    position: absolute;
+    top: 0;
+  }
+  .my-carousel-style .backImag-blur{
+    width: 100%;
+    height: 100%;
+    z-index: -151;
+    position: absolute;
+    top: 0;
+    backdrop-filter: blur(10px);
+  }
+
+  .my-carousel-style img{
+    display: block;
+    margin: auto;
+    width: auto;
+    height: 100%;
+    object-fit: fill;
   }
   .addbutton {
     border: 2px solid green;

@@ -55,11 +55,13 @@ CREATE TABLE `location_order` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE `commentaires` (
-  `Num` int(11) NOT NULL ,
-  `id` int(11) NOT NULL,
-  `Commentaire` text NOT NULL,
-  `DateCommentaire` timestamp NOT NULL DEFAULT current_timestamp()
+  `Num` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `id` INT NOT NULL,
+  `Commentaire` TEXT NOT NULL,
+  `DateCommentaire` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  FOREIGN KEY (`id`) REFERENCES `utilisateur` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 -- Sample data for utilisateur table
 INSERT INTO `utilisateur` (`prenom`, `nom`, `email`, `password`, `image_path`, `type`) VALUES
@@ -118,7 +120,4 @@ INSERT INTO `location_order` (`user_id`, `logement_id`, `status`) VALUES
 (4, 8, 'approved'),
 (1, 10, 'pending');
 
-ALTER TABLE `commentaires`
-  ADD PRIMARY KEY (`Num`),
-  ADD KEY `nom` (`id`);
 

@@ -198,7 +198,7 @@ a:hover {
   width: 50%;
   float: left;
   padding-left: 25px;
-  padding-right: 25px;
+  padding-right: 5px;
 }
 
 @media (min-width: 992px) {
