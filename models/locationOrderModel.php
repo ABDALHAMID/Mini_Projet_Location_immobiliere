@@ -26,6 +26,22 @@ class LocationOrderModel {
         }
         return $result;
     }
+    public function UpdateLocationOrderStatusById($orderId, $status) {
+        $query = "UPDATE `location_order` SET status='$status' WHERE id='$orderId'";
+        $result = $this->db->query($query);
+        if(!$result) {die($this->db->error);
+        }
+        return $result;
+    }
+
+    public function getOrdersByStatus($status){
+        $query = "SELECT * FROM location_order WHERE status='$status';";
+        $result = $this->db->query($query);
+        if(!$result) {
+            die($this->db->error);
+        }
+        return $result;
+    }
 
     public function getLogementOrder($user_id, $logement_id, $status) {
         $query = "SELECT * FROM location_order WHERE logement_id='$logement_id' AND user_id='$user_id' AND status='$status';";

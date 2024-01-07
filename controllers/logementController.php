@@ -39,6 +39,46 @@ function getIdOfLastLogement(){
   return $id;
 }
 
+function getPendingLogement(){
+  $logementModel = new LogementModel();
+  $pandingOrders = getPendingOrders();
+  
+
+  $data = [];
+  foreach ($pandingOrders as $row) {
+    $user = getUserById($row['user_id']);
+    $logement = $logementModel->getLogementById($row['logement_id']);
+
+
+    $combinedInfo = [
+        'logement' => $logement,
+        'user' => $user,
+        'order_date' => $row,
+    ];
+
+    $data[] = $combinedInfo;
+  }
+
+  
+
+  return $data;
+
+}
+
+function aproverLogement(){
+  $logementModel = new LogementModel();
+  $logement_id = $_GET['id'];
+  $orderId = $_GET['orderid'];
+  $result = $logementModel->updateStatuLogement($logement_id, 'rented');
+  if($result){
+    $result = aproveOrder($orderId);
+  }else{
+    $result = false;
+  }
+  return $result;
+
+}
+
 function addLogement($name, $adresse, $type_logement, $nombre_chambres, $prix, $description, $status, $area, $beds, $baths, $garage, $city)
 {
   $logementModel = new LogementModel();

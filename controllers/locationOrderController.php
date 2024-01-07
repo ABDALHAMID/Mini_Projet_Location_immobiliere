@@ -28,6 +28,18 @@
     }
 
   }
+  function aproveOrder($orderId){
+    $lOrderModel = new LocationOrderModel();
+    $status = $lOrderModel->UpdateLocationOrderStatusById($orderId, 'approved');
+    if($status){
+      return array('status'=> true);
+    }
+    else{
+      return array('status'=> false);
+    }
+
+  }
+
 
   function checkIfOrderExist(){
     $lOrderModel = new LocationOrderModel();
@@ -42,7 +54,13 @@
     else return false;
   }
 
+  function getPendingOrders(){
+    $lOrderModel = new LocationOrderModel();
+    $data = $lOrderModel->getOrdersByStatus('pending');
+    return $data;
+  }
 
+  
 
 
 ?>

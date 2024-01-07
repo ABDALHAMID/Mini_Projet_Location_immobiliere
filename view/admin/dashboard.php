@@ -30,6 +30,9 @@ $user = getUser();
           case 'modifier':
             include('modiefierLogement.php');
             break;
+            case 'logmentToProcess':
+              include('logmentToProcess.php');
+              break;
         default:
           include('mainPanel.php');
           break;

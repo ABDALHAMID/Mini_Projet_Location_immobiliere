@@ -41,6 +41,12 @@
                 <i class="mdi mdi-contacts menu-icon"></i>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) . '?page=logmentToProcess'?>">
+                <span class="menu-title">logmentToProcess</span>
+                <i class="mdi mdi-contacts menu-icon"></i>
+              </a>
+            </li>
 
             <li class="nav-item">
               <a class="nav-link" href="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) . '?page=statistique'?>">

@@ -54,6 +54,13 @@ class LogementModel {
         return $result;
     }
 
+
+    public function updateStatuLogement($logement_id, $status){
+        $query = "UPDATE `logement` SET status='$status' WHERE id='$logement_id'";
+        $result = $this->db->query($query);
+        return $result;
+    }
+
     public function dropLogement($logementId){
         $query = "DROP * FROM logement WHERE id = $logementId";
         $result = $this->db->query($query);
