@@ -33,7 +33,7 @@
         }
 
         messageList.append(botMessage);
-        var tnxmsg = $('<li>').text('si vous aver une autre question!');
+        var tnxmsg = $('<li>').text('"Est-ce que vous avez d\'autres questions "?');
         messageList.append(tnxmsg);
       },
       error: function () {

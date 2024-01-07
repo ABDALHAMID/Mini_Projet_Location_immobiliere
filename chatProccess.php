@@ -7,9 +7,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['message'])) {
 
     // Define keywords and their corresponding values
     $keywords = array(
-        'logement' => 'en a plusier logement vous pover le voir clicker sur logement',
-        'prix' => 'les prix de 200mad a 1000mad',
-        'type' => 'diha fsor9 rask',
+        'logement' => 'Pour decouvrir d\'autres logements visitez la page Logements  ',
+        'prix' => 'les prix entre 200mad et 1000mad',
+        'type' => 'Vous pouvez trouver des appartements , des villas , des maison , des salles , portes ouvertes ',
         // Add more keywords as needed
     );
 
