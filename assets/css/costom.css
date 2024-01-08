@@ -1287,9 +1287,10 @@
   .chat {
     position: fixed;
     z-index: 9999;
-    top: 50%;
-    left: 50%;
-    width: 260px;
+    bottom: 20px;
+    right: 10px;
+    width: 360px;
+    height: 400px;
     background-color: white;
     border: 1px solid ;
     border-radius: 5px;
@@ -1308,7 +1309,7 @@
   }
   
   .chat-window {
-    height: 220px;
+    height: 300px;
     overflow-y: scroll;
   }
   

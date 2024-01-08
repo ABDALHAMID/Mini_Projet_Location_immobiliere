@@ -1288,17 +1288,21 @@
   .chat {
     position: fixed;
     z-index: 9999;
-    top: 50%;
-    left: 50%;
-    width: 260px;
-    background-color: white;
-    border: 1px solid ;
+    bottom: 20px;
+    right: 10px;
+    width: 360px;
+    height: 400px;
+    background-color: #131023;
+    border: 1px solid black ;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   }
+  .chat input{
+    background-color: #232033;
+  }
   
   .chat-header {
-    background-color: green;
+    background-color: #030003;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -1309,7 +1313,7 @@
   }
   
   .chat-window {
-    height: 220px;
+    height: 300px;
     overflow-y: scroll;
   }
   
