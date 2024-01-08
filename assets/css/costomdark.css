@@ -9,7 +9,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: #fff;
+   background-color: #030013;
    gap: 2px;
    flex-wrap: wrap;
    overflow: hidden;
@@ -20,7 +20,7 @@
    position: absolute;
    width: 100%;
    height: 100%;
-   background: linear-gradient(#fff,#0f0,#fff);
+   background: linear-gradient(#030013,#0f0,#030013);
    animation: animate 5s linear infinite;
  }
  @keyframes animate 
@@ -41,7 +41,7 @@
    display: block;
    width: calc(6.25vw - 2px);
    height: calc(6.25vw - 2px);
-   background: #fff;
+   background: #030013;
    z-index: 2;
    
    transition: 1.5s;
@@ -57,7 +57,7 @@
    position: absolute;
    top: 15%;
    width: 500px;
-   background: #222; 
+   background: #031003dd; 
    z-index: 1000;
    display: flex;
    justify-content: center;
@@ -103,7 +103,8 @@
    outline: none;
    padding: 25px 10px 7.5px;
    border-radius: 4px;
-   color: #26a356;
+   color: #0f0;
+   text-shadow: 0 0 5px #0f0;
    font-weight: 500;
    font-size: 1em;
  }
@@ -113,7 +114,7 @@
    left: 0;
    padding: 15px 10px;
    font-style: normal;
-   color: #aaa;
+   color: #0f0;
    transition: 0.5s;
    pointer-events: none;
  }
@@ -122,7 +123,7 @@
  {
    transform: translateY(-7.5px);
    font-size: 0.8em;
-   color: #0005;
+   color: #0f05;
  }
  .signin .content .form .links 
  {
@@ -457,7 +458,7 @@
   /* main-logo-button styling */
   .main-logo-button {
     --border-right: 6px;
-    --text-stroke-color: rgba(0, 0, 0, 0.6);
+    --text-stroke-color: rgba(200, 200, 200, 0.6);
     --animation-color: #37FF8B;
     --fs-size: 2em;
     letter-spacing: 3px;
@@ -503,7 +504,7 @@
     height: 2.5rem;
     padding: 0 50px;
     background: rgba(0, 0, 0, 0);
-    color: black;
+    color: whitesmoke;
     overflow: hidden;
   }
   

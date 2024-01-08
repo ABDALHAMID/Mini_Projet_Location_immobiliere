@@ -1,4 +1,4 @@
-<div class="click-closed"></div>
+
 
 <!-- ======= Header/Navbar ======= -->
 <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">

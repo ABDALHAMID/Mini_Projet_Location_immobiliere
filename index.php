@@ -29,8 +29,18 @@ require('database_connection.php');
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link rel="stylesheet" href="assets/css/costom.css">
-  <link href="assets/css/style.css" rel="stylesheet">
+  <?php 
+    if(isset($_COOKIE['theme']) && $_COOKIE['theme']=='dark') 
+    {
+      echo '<link href="assets/css/styledark.css" rel="stylesheet" id="maincss">';
+      echo '  <link rel="stylesheet" href="assets/css/costomdark.css" id="costemcss">';
+    }
+    else{
+      echo '<link href="assets/css/style.css" rel="stylesheet" id="maincss">';
+      echo '  <link rel="stylesheet" href="assets/css/costom.css" id="costemcss">';
+    }
+  ?>
+
  
   
 </head>

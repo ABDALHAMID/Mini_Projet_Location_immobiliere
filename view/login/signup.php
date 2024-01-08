@@ -7,7 +7,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   $pwd = $_POST["password"];
   $userStatus = addClient($fname, $name, $email, $pwd);
   if($userStatus["status"]){
-        header("location: index.php");
+    echo '<script>window.location.href = "index.php";</script>';
 
         exit();
       }
