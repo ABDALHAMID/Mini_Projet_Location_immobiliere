@@ -1,4 +1,45 @@
-<
+<?php
+/*
+ini_set("SMTP", "smtp.example.com");
+ini_set("smtp_port", "587");
+ini_set("sendmail_from", "your_email@example.com");
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Récupérer les données du formulaire
+    $name = htmlspecialchars($_POST["name"]);
+    $email = htmlspecialchars($_POST["email"]);
+    $subject = htmlspecialchars($_POST["subject"]);
+    $message = htmlspecialchars($_POST["message"]);
+
+    // Envoi du mail
+    $to = "rentit.projet@gmail.com"; // Remplacez ceci par votre adresse e-mail
+    $headers = "From: $email\r\n" .
+               "Reply-To: $email\r\n" .
+               "X-Mailer: PHP/" . phpversion();
+
+    // Construction du message
+    $email_message = "Nom: $name\n";
+    $email_message .= "Email: $email\n";
+    $email_message .= "Object: $subject\n\n";
+    $email_message .= "Message:\n$message";
+
+    // Envoyer le message
+    mail($to, $subject, $email_message, $headers);
+    if ($success) {
+      // Redirection après l'envoi du formulaire (à personnaliser)
+      header("Location: merci.html");
+      exit();
+  } else {
+      // Afficher un message d'erreur
+      echo "Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer plus tard.";
+  }
+
+    
+    
+   
+}
+*/?>
+
 
 <main id="main">
 
@@ -158,3 +199,4 @@
     </section><!-- End Contact Single-->
 
   </main><!-- End #main -->
+ 
