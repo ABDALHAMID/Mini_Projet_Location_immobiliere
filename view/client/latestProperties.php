@@ -36,7 +36,7 @@
                           <div class="card-header-a">
                             <h2 class="card-title-a">
                             <a href="'.$_SERVER['PHP_SELF'].'?page=logement&id='.$logement['id'].'">'.$logement['name'].'
-                            <br />'.$logement['adresse'].', '.$logement['city'].'</a>
+                            <br />, '.$logement['city'].'</a>
                             </h2>
                           </div>
                           <div class="card-body-a">

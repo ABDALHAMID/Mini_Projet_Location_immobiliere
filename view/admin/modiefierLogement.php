@@ -2,7 +2,7 @@
 $id = $_GET["id"];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_FILES["image"])) {
+    if (isset($_FILES["image"]) && $_FILES["image"]["error"] === UPLOAD_ERR_OK) {
         $istatus = addLImage();
     }
     if (isset($_POST["amenitie"]) && !empty(trim($_POST["amenitie"]))) {
