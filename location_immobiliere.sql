@@ -318,6 +318,9 @@ CREATE TABLE `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`id`, `prenom`, `nom`, `email`, `password`, `image_path`, `type`) VALUES
+(0, 'abdelhamid', 'boulaajoul', 'abdelhamid@rentit.com', '123', 'default.jpg', 'administrator'),
+(1, 'ihssan', 'elmomen', 'ihssan@rentit.com', '123', 'default.jpg', 'administrator'),
+(2, 'wafae', 'raoui', 'wafae@rentit.com', '123', 'default.jpg', 'administrator'),
 (3, 'Admin', 'User', 'admin@example.com', '123', 'default.jpg', 'administrator'),
 (5, 'Mohammed', 'Ahmed', 'mohammed.ahmed1@gmail.com', '123', 'default.jpg', 'client'),
 (6, 'Fatima', 'Zahra', 'fatima.zahra2@outlook.com', '123', 'client6.jpg', 'client'),
@@ -410,7 +413,11 @@ INSERT INTO `utilisateur` (`id`, `prenom`, `nom`, `email`, `password`, `image_pa
 (93, 'Sara', 'El Abbadi', 'sara.elabbadi79@e-polytechnique.ma', '123', 'client67.jpg', 'client'),
 (94, 'Karim', 'Jebrouni', 'karim.jebrouni80@gmail.com', '123', 'client68.jpg', 'client'),
 (95, 'Leila', 'Zouak', 'leila.zouak81@e-polytechnique.ma', '123', 'client69.jpg', 'client'),
-(96, 'Ismail', 'Chabbi', 'ismail.chabbi82@gmail.com', '123', 'client70.jpg', 'client');
+(96, 'Ismail', 'Chabbi', 'ismail.chabbi82@gmail.com', '123', 'client70.jpg', 'client'),
+(97, 'client', 'user', 'client@example.com', '123', 'default.jpg', 'client'),
+(98, 'abdelhamid', 'boulaajoul', 'abdelhamid@gmail.com', '123', 'default.jpg', 'client'),
+(99, 'ihssan', 'elmomen', 'ihssan@gmail.com', '123', 'default.jpg', 'client'),
+(100, 'wafae', 'raoui', 'wafae@gamil.com', '123', 'default.jpg', 'client');
 
 --
 -- Indexes for dumped tables

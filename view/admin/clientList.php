@@ -28,7 +28,7 @@ $user=getClient();
                               </td>
                               <td> '.$a['prenom'].' </td>
                               <td>
-                              <label class="badge badge-gradient-success">ADMIN</label>
+                              <label class="badge badge-gradient-success">client</label>
                               </td>
                               <td> '.$a['email'].' </td>
                               
