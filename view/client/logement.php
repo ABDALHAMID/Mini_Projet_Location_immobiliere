@@ -177,7 +177,7 @@ $LImages = getLImages();
             </li>
             <li class="nav-item">
               <a class="nav-link" id="pills-plans-tab" data-bs-toggle="pill" href="#pills-plans" role="tab"
-                aria-controls="pills-plans" aria-selected="false">Floor Plans</a>
+                aria-controls="pills-plans" aria-selected="false">image de logement</a>
             </li>
           </ul>
           <div class="tab-content" id="pills-tabContent">

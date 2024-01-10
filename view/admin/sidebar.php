@@ -55,7 +55,7 @@
               </a>
             </li>
             
-            <li class="nav-item sidebar-actions">
+            <!-- <li class="nav-item sidebar-actions">
               <span class="nav-link">
                 <div class="border-bottom">
                   <h6 class="font-weight-normal mb-3">ajouter</h6>
@@ -64,6 +64,6 @@
                   <button class="btn btn-block btn-lg btn-gradient-primary mt-4">+ ajouter</button>
                 </a>
               </span>
-            </li>
+            </li> -->
           </ul>
         </nav>

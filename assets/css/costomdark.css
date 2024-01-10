@@ -1356,10 +1356,13 @@
   .comanter-my-style{
     height: 60vh;
   }
+  .logement-item-img{
+    height: 450px;
+  }
   .logement-item-img img{
     width: 100%;
-    height: auto;
-    object-fit: fill;
+    height: 100%;
+    object-fit: cover;
   }
   .cat-close-button {
     position: relative;

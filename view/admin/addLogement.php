@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <?php include('view\backButton.php') ?>
             <div class="col-lg-7 mx-auto">
               <div class="auth-form-light text-left p-5">
-                <h4>ajouter un utilisateur</h4>
+                <h4>ajouter un logement</h4>
                 <?php
                 if(isset($userStatus["status"])){
 

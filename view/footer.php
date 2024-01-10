@@ -59,22 +59,22 @@
             <div class="w-body-a">
               <ul class="list-unstyled">
                 <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">France</a>
+                  <i class="bi bi-chevron-right"></i> <a href="<?php echo $_SERVER['PHP_SELF'] . "?page=France" ?>">France</a>
                 </li>
                 <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">China</a>
+                  <i class="bi bi-chevron-right"></i> <a href="<?php echo $_SERVER['PHP_SELF'] . "?page=China" ?>">China</a>
                 </li>
                 <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">USA</a>
+                  <i class="bi bi-chevron-right"></i> <a href="<?php echo $_SERVER['PHP_SELF'] . "?page=USA" ?>">USA</a>
                 </li>
                 <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Tunisie</a>
+                  <i class="bi bi-chevron-right"></i> <a href="<?php echo $_SERVER['PHP_SELF'] . "?page=Tunisie" ?>">Tunisie</a>
                 </li>
                 <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">UAE</a>
+                  <i class="bi bi-chevron-right"></i> <a href="<?php echo $_SERVER['PHP_SELF'] . "?page=UAE" ?>">UAE</a>
                 </li>
                 <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Italie</a>
+                  <i class="bi bi-chevron-right"></i> <a href="<?php echo $_SERVER['PHP_SELF'] . "?page=Italie" ?>">Italie</a>
                 </li>
               </ul>
             </div>

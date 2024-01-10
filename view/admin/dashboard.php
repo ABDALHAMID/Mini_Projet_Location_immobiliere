@@ -34,7 +34,7 @@ $user = getUser();
               include('logmentToProcess.php');
               break;
         default:
-          include('mainPanel.php');
+          include('page404.php');
           break;
       }
     } else {

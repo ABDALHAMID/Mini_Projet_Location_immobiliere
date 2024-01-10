@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
  <div class="content" > 
 
-  <h2>Sign Un</h2> 
+  <h2>SignUn</h2> 
 
                 <?php
                 if(isset($userStatus["status"])){
@@ -77,13 +77,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
    <div class="links">
      <a href="#">Forgot Password</a>
-    <a href="<?php echo $_SERVER['PHP_SELF'].'?page=login'; ?>">Log In</a> 
+    <a href="<?php echo $_SERVER['PHP_SELF'].'?page=login'; ?>">LogIn</a> 
 
    </div> 
 
    <div class="inputBox"> 
 
-    <input type="submit" value="Login"> 
+    <input type="submit" value="SINGUP"> 
 
    </div> 
 
